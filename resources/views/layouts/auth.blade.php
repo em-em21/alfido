@@ -24,7 +24,7 @@
 				{{-- Logo - Homepage Link --}}
 				<div class="flex justify-center lg:justify-start lg:px-12 py-12 bg-gray-100 lg:bg-white">
 					<a href="{{ route('homepage') }}" class="cursor-pointer flex items-center">
-						<img class="w-36" src="{{ asset('img/logo/logo-block.png') }}">
+						<img class="w-20" src="{{ asset('img/logo/logo.png') }}">
 					</a>
 				</div>
 

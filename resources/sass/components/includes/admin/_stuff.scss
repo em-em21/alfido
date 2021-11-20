@@ -108,7 +108,11 @@
 
 // forms
 // input
-input,
+// input[type="radio"] {
+//   background: $gray ;
+// }
+
+input:not([type="radio"]),
 textarea {
   background: lighten($bgSecondary, 5%) !important;
   color: $textSecondary !important;

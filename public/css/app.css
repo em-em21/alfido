@@ -9364,11 +9364,12 @@ html .bs_widget_wrapper > div:last-child {
 #layer-admin .customer-modal-layout .customer-modal__sections .section__body .list-group.edit-info .form-group label {
   color: #f2f3f7;
 }
-#layer-admin .customer-modal-layout .customer-modal__sections .section__body .list-group.edit-info .form-group input {
-  width: auto;
+#layer-admin .customer-modal-layout .customer-modal__sections .section__body .list-group.edit-info .form-group input:not([type=radio]) {
+  width: 100%;
   border: 1px solid rgba(242, 243, 247, 0.4);
+  padding: 0.75rem 0.75rem;
 }
-#layer-admin .customer-modal-layout .customer-modal__sections .section__body .list-group.edit-info .form-group input:focus {
+#layer-admin .customer-modal-layout .customer-modal__sections .section__body .list-group.edit-info .form-group input:not([type=radio]):focus {
   color: #f2f3f7 !important;
   border-color: rgba(242, 243, 247, 0.8);
   box-shadow: 0 0 5px 0 #80bdff;
@@ -9387,13 +9388,13 @@ html .bs_widget_wrapper > div:last-child {
   color: #fff;
 }
 #layer-admin .customer-modal-layout .customer-modal__sections .section__body .list-group.edit-info .form-group .form-check input {
-  margin-top: 0.4rem;
+  margin-top: 0.1rem;
 }
 #layer-admin .customer-modal-layout .customer-modal__sections .section__body .list-group.edit-info .form-group .form-check input:checked + label {
   color: #f2f3f7;
 }
 #layer-admin .customer-modal-layout .customer-modal__sections .section__body .list-group.edit-info .form-group .form-check input:focus, #layer-admin .customer-modal-layout .customer-modal__sections .section__body .list-group.edit-info .form-group .form-check input:active {
-  box-shadow: none;
+  box-shadow: none !important;
 }
 #layer-admin .customer-modal-layout .customer-modal__sections .section__body .list-group.edit-info .form-group .form-check label {
   color: rgba(242, 243, 247, 0.6);
@@ -9662,7 +9663,7 @@ html .bs_widget_wrapper > div:last-child {
 #layer-admin .modal-footer {
   border-top: 1px solid rgba(233, 236, 239, 0.1);
 }
-#layer-admin input,
+#layer-admin input:not([type=radio]),
 #layer-admin textarea {
   background: #2b2b2b !important;
   color: #bdbdbd !important;
@@ -9670,24 +9671,24 @@ html .bs_widget_wrapper > div:last-child {
   overflow: hidden;
   transition: all 0.2s linear !important;
 }
-#layer-admin input::-moz-placeholder, #layer-admin textarea::-moz-placeholder {
+#layer-admin input:not([type=radio])::-moz-placeholder, #layer-admin textarea::-moz-placeholder {
   color: #bdbdbd;
 }
-#layer-admin input:-ms-input-placeholder, #layer-admin textarea:-ms-input-placeholder {
+#layer-admin input:not([type=radio]):-ms-input-placeholder, #layer-admin textarea:-ms-input-placeholder {
   color: #bdbdbd;
 }
-#layer-admin input::placeholder,
+#layer-admin input:not([type=radio])::placeholder,
 #layer-admin textarea::placeholder {
   color: #bdbdbd;
 }
-#layer-admin input:focus,
+#layer-admin input:not([type=radio]):focus,
 #layer-admin textarea:focus {
   border: 1px solid #33c9dc !important;
   box-shadow: 0 0 4px 0 #33c9dc !important;
   color: white !important;
   background: #262626 !important;
 }
-#layer-admin input:focus + label,
+#layer-admin input:not([type=radio]):focus + label,
 #layer-admin textarea:focus + label {
   color: #fff;
 }

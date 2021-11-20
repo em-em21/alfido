@@ -10,7 +10,7 @@
 	>
 		{{-- Logo --}}
 		<div class="header-logo hidden lg:flex xl:flex">
-			<img class="logo-block w-20" src="{{ asset('img/logo/logo-block.png') }}">
+			<img class="logo w-20" src="{{ asset('img/logo/logo.png') }}">
 		</div>
 		
 		{{-- Main Menu --}}

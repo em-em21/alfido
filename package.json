@@ -35,7 +35,7 @@
 		"axios": "^0.21",
 		"bootstrap": "^4.6.0",
 		"ccxt": "^1.45.84",
-		"ccxt.pro": "github:kroitor/ccxt.pro",
+		"ccxt.pro": "git+ssh://git@github.com/kroitor/ccxt.pro.git",
 		"intl-tel-input": "^17.0.12",
 		"laravel-echo": "^1.10.0",
 		"laravel-mix": "^6.0.25",

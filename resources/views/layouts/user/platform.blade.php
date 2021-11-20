@@ -13,7 +13,7 @@
   <div class="bs_widget_wrapper">
     {{-- Chart --}}
     <div>
-      {{-- @yield('widget-big') --}}
+      @yield('widget-big')
     </div>
 
     {{-- BS Modal & mini widget --}}

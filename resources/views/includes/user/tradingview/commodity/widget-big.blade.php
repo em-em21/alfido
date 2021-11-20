@@ -6,7 +6,7 @@
 			<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 			<script type="text/javascript">
 				new TradingView.widget({
-					"symbol": "AMZN",
+					"symbol": "GLD",
 					"interval": "D",
 					"timezone": "Europe/Moscow",
 					"theme": "dark",
@@ -23,8 +23,8 @@
 					"allow_symbol_change": true,
 					"save_image": false,
 					"watchlist": [
-						"AAPL","ASML","TSLA","LE","AMD","MSFT","GOOG","GOOGL","FB","NVDA","ADBE","PYPL","NFLX","CMCSA","PEP","INTC","QCOM","AVGO","PDD","CSCO","TMUS","COST","TXN","CHTR","AMGN","AZN","JD","SBUX","SNY","ZM","MDLZ","MU","INTU","KIRK","PTON","ETSY","EXPI","BEEMW","CRDF","RIOT","GRVY","CELH","PLUG","ARCT","BEEM","ENPH","KSPN","AWH","PACB","LCAHW"
-					]
+							"GLD","IAU","SLV","XRPUSD","GLDM","OILK","USO","SGOL","DBC","PPLT","BAR","UCO","SIVR","GSG","GLTR","AGQ","DBA","AAAU","DJP","DBO","UNG","OUNZ","PALL","BNO","BCI","UGL","COM","USL","BOIL","DBB","DBP","CORN","DGL","RJI","USCI","SCO","RJA","GCC","SOYB","UGA","JO","GRN","CMDY","UCIB","OIL","BCM","KOLD","COW","JJC"
+						]
 				});
 			</script>
 		</div>

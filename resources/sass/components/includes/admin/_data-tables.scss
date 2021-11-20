@@ -1,0 +1,223 @@
+.table {
+	overflow-x: inherit;
+	max-width: 100% !important;
+	width: 100%;
+
+	thead th {
+		border-bottom: 1px solid rgba(#dee2e6, 0.5) !important;
+	}
+
+	td {
+		padding: 0 0.75rem !important;
+	}
+
+	th {
+		padding: 0.5rem 0.75rem !important;
+	}
+
+	td,
+	th {
+		vertical-align: baseline !important;
+		border-top: 1px solid rgba(#dee2e6, 0.2);
+	}
+	th {
+		font-weight: 400;
+	}
+
+	&-wrapper_new {
+		background: $bgSecondary;
+		box-shadow: 0px 0px 5px 0px #0f0e0e;
+	}
+
+	tbody {
+		tr {
+			transition: all ease-in 0.05s !important;
+			color: rgba($textSecondary, 0.8);
+			background: $bgPrimary;
+
+			&.odd {
+				background: $bgSecondary;
+			}
+
+			&:hover {
+				background: rgba(white, 0.08);
+				color: $textPrimary !important;
+
+				svg {
+					fill: $textPrimary !important;
+				}
+			}
+		}
+
+		&.focus-on-hover {
+			td {
+				padding: 0.5rem !important;
+			}
+
+			tr {
+				&:hover {
+					background: #21262d !important;
+					color: $textPrimary !important;
+
+					// customer modal trigger hover state
+					.sections-triggers__btn--info {
+						color: $white;
+						background: #008394;
+						border-color: #008394;
+					}
+
+					svg {
+						fill: $bgSecondary !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+// table scroll bar
+.scroll-bar::-webkit-scrollbar {
+	height: 8px;
+}
+
+.scroll-bar::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.6);
+	box-shadow: 0 0 35px rgba(0, 0, 0, 0.2) inset;
+}
+
+.scroll-bar::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 18px;
+}
+
+// buttons and stuff
+.actions-wrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+.actions-wrapper a:not(:last-child) {
+	margin-right: 10px;
+}
+
+.heroBtn {
+	margin-left: 20px !important;
+}
+
+.crud-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 2.5px;
+	outline: none !important;
+	border: none;
+	padding: 7px;
+	cursor: pointer;
+	margin-right: 0.5rem;
+
+	i {
+		padding: 0;
+		font-size: 12px;
+		color: $white;
+	}
+
+	&_add {
+		background-color: #4caf50;
+
+		&:hover {
+			background-color: lighten(#4caf50, 5%);
+		}
+	}
+
+	&_edit {
+		background-color: #ff9800;
+
+		&:hover {
+			background-color: lighten(#ff9800, 5%);
+		}
+	}
+
+	&_delete {
+		background-color: #aa2e25;
+
+		&:hover {
+			background-color: lighten(#aa2e25, 5%);
+		}
+	}
+
+	&_balance {
+		background-color: #263238;
+
+		&:hover {
+			background-color: lighten(#263238, 5%);
+		}
+	}
+}
+
+.dataTables_length,
+.dataTables_filter {
+	margin-top: 5px;
+}
+
+// === Tables === //
+
+.dataTables_wrapper tbody,
+.dataTables_wrapper thead {
+	color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.dataTables_wrapper .row .dataTables_length,
+.dataTables_wrapper .row .dataTables_filter,
+.dataTables_wrapper .dataTables_info {
+	color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.dataTables_wrapper input,
+.dataTables_wrapper select {
+	background: #3c434a;
+	color: white;
+	border: none;
+}
+
+.dataTables_wrapper {
+	/*
+	 Pagination
+	*/
+	.dataTables_paginate {
+		.pagination {
+			align-items: stretch;
+
+			.paginate_button {
+				a {
+					background: #3c434a !important;
+					color: white !important;
+					border: none !important;
+					height: 100% !important;
+
+					&:hover {
+						background: rgba(255, 255, 255, 0.05) !important;
+					}
+				}
+
+				&.active {
+					a,
+					a:focus {
+						background: #282c30 !important;
+						color: white !important;
+						box-shadow: none !important;
+						border: 1px solid rgba(white, 0.1) !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+.dataTables_wrapper thead th:hover {
+	color: $blue;
+}
+
+// ...
+.dataTables_info {
+	color: rgba(255, 255, 255, 0.6) !important;
+}

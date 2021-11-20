@@ -1,0 +1,148 @@
+.chk {
+	input[type='checkbox'] {
+		visibility: hidden;
+
+		&:checked + label {
+			left: 27px;
+			background: #f7f7f7;
+		}
+	}
+
+	.box {
+		width: 40px;
+		height: 10px;
+		background: gray;
+		position: relative;
+		border-radius: 3px;
+	}
+
+	label {
+		display: block;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		transition: all 0.6s ease;
+		cursor: pointer;
+		position: absolute;
+		top: -3px;
+		left: -3px;
+		background: #333333;
+	}
+}
+
+/* ============= Main Dark Styles =========== */
+.dark .content-wrapper {
+	background: #222222;
+	padding: 0 40px;
+}
+
+/* dark header styles */
+.dark .main-header {
+	border-bottom: 1px solid transparent;
+}
+
+.dark .navbar-nav .nav-link {
+	color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.dark .card-header h4.title,
+.dark .card-header h5 {
+	font-weight: 300;
+	color: white !important;
+}
+
+/* end dark header styles */
+
+.dark .card {
+	background: transparent;
+}
+
+.dark .form-group label {
+	font-weight: 400;
+}
+
+.dark .form-group label {
+	color: white;
+}
+
+.dark .form-group small {
+	color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* tables */
+
+.dark #deals-table tbody,
+.dark #income-table tbody,
+.dark #outcome-table tbody {
+	color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.dark #deals-table thead,
+.dark #income-table thead,
+.dark #outcome-table thead {
+	font-size: 16px !important;
+	color: rgba(255, 255, 255, 0.55) !important;
+}
+
+.dark #deals-table_length,
+.dark #deals-table_filter,
+.dark #deals-table_info,
+.dark #income-table_length,
+.dark #income-table_filter,
+.dark #income-table_info,
+.dark #outcome-table_length,
+.dark #outcome-table_filter,
+.dark #outcome-table_info {
+	color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.dark #deals-table_filter input,
+.dark #deals-table_length select,
+.dark #deals-table_previous a,
+.dark #deals-table_next a,
+.dark #income-table_filter input,
+.dark #income-table_length select,
+.dark #income-table_previous a,
+.dark #income-table_next a,
+.dark #outcome-table_filter input,
+.dark #outcome-table_length select,
+.dark #outcome-table_previous a,
+.dark #outcome-table_next a,
+.dark .form-group input {
+	background: #3c434a;
+	color: white;
+	border: none;
+}
+
+.dark #deals-table tbody tr:hover,
+.dark #income-table tbody tr:hover,
+.dark #outcome-table tbody tr:hover {
+	background: rgba(255, 255, 255, 0.025);
+	color: white;
+}
+
+.dark #deals-table thead th:hover,
+.dark #income-table thead th:hover,
+.dark #outcome-table thead th:hover {
+	color: white;
+}
+/* end table */
+
+/* ============ Transactions darked ============= */
+.dark #income-table tbody tr {
+	background: rgba(23, 95, 40, 0.05);
+	color: white;
+}
+
+.dark #income-table .in-reason {
+	color: #3dff6a;
+}
+
+.dark #outcome-table tbody tr {
+	background: rgba(163, 39, 51, 0.05);
+	color: white;
+}
+
+.dark #outcome-table .out-reason {
+	color: #ff5c56;
+}

@@ -1,0 +1,32 @@
+#layer-admin {
+	body {
+		background: #282828;
+	}
+
+	// data tables
+	@import './../components/includes/admin/data-tables';
+
+	// table on index page (new)
+	@import './../components/includes/admin/index-table';
+
+	// sweet alert
+	@import './../components/includes/admin/sweet-alert';
+
+	// stuff
+	@import './../components/includes/admin/stuff';
+
+	// sidebar
+	@import './../components/includes/admin/sidebar';
+
+	// verification requests {/requests}
+	@import './../components/includes/admin/verification-requests';
+
+	// converter & calculator {/converter}
+	@import './../components/includes/admin/converter';
+
+	// chat
+	@import './../components/includes/admin/chat';
+
+	// *** Responsive
+	@import './../components/includes/admin/responsive';
+}

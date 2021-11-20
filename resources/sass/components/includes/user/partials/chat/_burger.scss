@@ -1,0 +1,250 @@
+.burger {
+	display: none;
+	// trigger
+	&__trigger {
+		display: block;
+		z-index: 10;
+		width: 45px;
+		height: 45px;
+		-webkit-transition: 0.4s;
+		-moz-transition: 0.4s;
+		-o-transition: 0.4s;
+		transition: 0.4s;
+		position: relative;
+
+		&:hover {
+			background-color: #222222;
+		}
+
+		&--lines,
+		&--lines::before,
+		&--lines::after {
+			position: absolute;
+			width: 25px;
+			height: 2px;
+			background-color: rgba(255, 255, 255, 0.7);
+			-webkit-transition: top 0.2s, transform 0.25s;
+			-moz-transition: top 0.2s, transform 0.25s;
+			-o-transition: top 0.2s, transform 0.25s;
+			transition: top 0.2s, transform 0.25s;
+		}
+
+		&--lines {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			&::before {
+				content: '';
+				top: -8px;
+			}
+
+			&::after {
+				content: '';
+				top: 8px;
+			}
+		}
+	}
+
+	// active
+	&__active {
+		.burger__lines {
+			background-color: transparent;
+
+			&::before {
+				top: 0;
+				transform: rotate(45deg);
+			}
+
+			&::after {
+				top: 0;
+				transform: rotate(-45deg);
+			}
+		}
+
+		.burger__nav {
+			right: 0;
+		}
+
+		.burger__overlay {
+			display: block;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+	}
+
+	// nav
+	&__nav {
+		padding: 70px 15px 0;
+		position: fixed;
+		top: 0;
+		right: -100%;
+		z-index: 100;
+
+		display: flex;
+		flex-flow: column;
+		height: 100%;
+		overflow: auto;
+
+		background-color: #141414;
+
+		-webkit-transition: right 0.3s;
+		-moz-transition: right 0.3s;
+		-o-transition: right 0.3s;
+		transition: right 0.3s;
+
+		// burger
+		li {
+			position: relative;
+			list-style: none;
+
+			.burgerDropdown {
+				margin: 0;
+				padding-left: 0;
+				padding: 10px 0;
+
+				background: rgba(0, 0, 0, 0.5);
+				box-shadow: inset 0 0 5px 0 rgba(255, 255, 255, 0.15);
+
+				display: none;
+
+				&.show {
+					display: flex;
+					flex-direction: column;
+					margin-bottom: 10px;
+				}
+
+				li {
+					a {
+						display: flex;
+						align-items: center;
+						width: 100%;
+						font-size: 13px;
+						padding: 10px 15px;
+						text-transform: uppercase;
+						color: rgba(255, 255, 255, 0.45);
+
+						&:hover,
+						&.active {
+							color: white;
+							span {
+								background: white;
+							}
+						}
+
+						span {
+							display: block;
+							background: rgba(255, 255, 255, 0.45);
+							width: 10px;
+							height: 10px;
+							border-radius: 50%;
+							margin: 0 10px 0 0;
+						}
+					}
+				}
+			}
+		}
+
+		// logo
+		&--link-logo {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+
+			margin-right: 0 !important;
+			margin-bottom: 25px;
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 130%;
+				left: 0%;
+				right: 0%;
+				height: 1px;
+				width: 100%;
+
+				background-color: rgba(255, 255, 255, 0.2);
+				display: block;
+			}
+
+			img {
+				width: 60px;
+				height: 45px;
+				opacity: 0.85;
+			}
+			span {
+				font-size: 17px;
+				text-transform: uppercase;
+				margin-top: 5px;
+				color: rgba(255, 255, 255, 0.2);
+			}
+		}
+
+		// links
+		&--link {
+			position: relative;
+			display: flex;
+			align-items: center;
+			padding: 7px 7px 7px 0;
+			margin-top: 15px;
+
+			font-size: 14px;
+			font-weight: 400;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: rgba(255, 255, 255, 0.6);
+
+			&:hover,
+			&.active,
+			&.drop-active {
+				color: white;
+				.nav__icons {
+					fill: white !important;
+				}
+			}
+
+			.nav__icons {
+				width: 17px;
+				height: 17px;
+				fill: rgba(255, 255, 255, 0.6);
+				margin-right: 15px;
+				margin-bottom: 3px;
+			}
+
+			p {
+				margin-bottom: 0;
+
+				svg.nav__icons.arr-down {
+					width: 10px;
+					height: 10px;
+					fill: rgba(255, 255, 255, 0.6);
+					margin-left: 5px;
+				}
+			}
+		}
+	}
+
+	// overlay
+	&__overlay {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		z-index: 10;
+
+		// close nav
+		// .burger-close {
+		// 	position: fixed;
+		// 	left: 0%;
+		// 	top: 6%;
+
+		// 	svg {
+		// 		width: 50px;
+		// 		height: 50px;
+		// 		fill: rgba(255, 255, 255, 1);
+		// 	}
+		// }
+	}
+}

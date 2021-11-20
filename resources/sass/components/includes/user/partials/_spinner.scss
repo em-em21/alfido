@@ -1,0 +1,33 @@
+.spinner-wrapper {
+	margin-left: 10px;
+
+	.spinner {
+		width: 20px;
+		height: 20px;
+		border: 2px solid transparent;
+		border-top-color: $white;
+		border-bottom-color: $white;
+		border-radius: 50%;
+		animation: loader-rotate 0.33s linear infinite;
+	}
+
+	&.page-spinner {
+		.spinner {
+			width: 3rem;
+			height: 3rem;
+			border-width: 5px;
+			border-top-color: #a78bfa;
+			border-bottom-color: #a78bfa;
+		}
+	}
+
+	@keyframes loader-rotate {
+		0% {
+			transform: rotate(0);
+		}
+
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+}

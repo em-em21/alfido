@@ -1,0 +1,108 @@
+// This wrapper applies bootstrap styles to DataTable only
+// Bootstrap styles needed for DataTable design only
+// The rest of page uses tailwind classes
+.dark-themed-bootstrap-datatable {
+	@import './bootstrap-dark';
+
+	/*
+		-----------
+		Additional styles
+		--------------------
+	*/
+
+	table.table.dataTable {
+		border: 1px solid #404040;
+		overflow: hidden;
+	}
+
+	// TOP: search-box and select
+	.dataTables_length,
+	.dataTables_filter {
+		margin-top: 1rem;
+		color: $textSecondary;
+
+		select,
+		input {
+			background: rgba(white, 0.1) !important;
+			color: $textSecondary !important;
+			border: 1px solid rgba($textSecondary, 0.4);
+		}
+
+		select {
+			margin: 0 0.3rem;
+
+			option:hover {
+				color: $textPrimary;
+			}
+		}
+	}
+
+	// CENTER: table itself
+	.dataTable {
+		border-radius: 5px;
+
+		thead {
+			th {
+				border-bottom: 1px solid rgba($textSecondary, 0.5);
+				color: $textPrimary;
+				font-weight: 400;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: lighten($info, 20%);
+				}
+			}
+		}
+
+		tbody {
+			tr {
+				background: #212121;
+			}
+		}
+
+		// when datatables empty
+		.dataTables_empty {
+			background: #212121;
+			color: rgba($textPrimary, 0.5);
+		}
+	}
+
+	// BOTTOM: pages count and pagination
+	.dataTables_info,
+	.pagination {
+		margin-top: 1rem !important;
+		color: $textSecondary;
+	}
+
+	//
+	.dataTables_wrapper > .row:first-child {
+		@include flex-column;
+
+		& > div {
+			width: 100%;
+			@include flex-column;
+			align-items: flex-start;
+
+			// select
+			select {
+				width: auto;
+			}
+		}
+
+		@media screen and (min-width: 420px) {
+			flex-direction: row;
+			flex-wrap: nowrap;
+			align-items: flex-end;
+			justify-content: space-between;
+
+			& > div:first-of-type {
+				margin-bottom: 0;
+			}
+
+			& > div {
+				align-items: stretch;
+			}
+		}
+	}
+}

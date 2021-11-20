@@ -1,0 +1,134 @@
+/* ------------------------------
+	Tailwind Chat Little Things
+	...that are easier to achieve
+	using good old SASS.
+---------------------------------
+*/
+
+$scrollBarBg: #333;
+$sentMessageBg: #2e2b3e;
+$receivedMessageBg: #16a34a;
+
+// additional styling
+.chat {
+	// bg when chat toggled
+	&-opened-bg {
+		background: darken($sentMessageBg, 4%);
+
+		&:hover {
+			background: darken($sentMessageBg, 10%);
+		}
+	}
+
+	// message
+	.message {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		color: white;
+		border-radius: 0.5rem;
+
+		// text in message bubble
+		.text {
+			font-size: 1rem;
+			word-break: break-word;
+			display: block;
+			color: white;
+			position: relative;
+			padding: 0.5rem 0.7rem;
+		}
+
+		// date under the message bubble
+		.date {
+			position: absolute;
+			top: 105%;
+			flex: 0;
+			clear: both;
+			font-size: 0.8rem;
+			color: $textSecondary;
+		}
+
+		// can be received or sent (r || s)
+		&.s::before,
+		&.r::after {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-top: 7px solid transparent;
+			border-bottom: 7px solid transparent;
+		}
+
+		// sent
+		&.s {
+			margin: 0.6rem 0.6rem 1rem auto;
+			background: $sentMessageBg;
+
+			&::before {
+				left: 100%;
+				bottom: 8px;
+				border-left: 14px solid $sentMessageBg;
+			}
+			.date {
+				right: 0%;
+				margin-right: 0.5rem;
+				align-self: flex-end;
+			}
+		}
+
+		// received
+		&.r {
+			margin: 0.6rem auto 1rem 0.6rem;
+			background: $receivedMessageBg;
+			color: white;
+
+			&::after {
+				right: 100%;
+				top: 8px;
+				border-right: 14px solid $receivedMessageBg;
+			}
+			.date {
+				left: 0%;
+				margin-left: 0.5rem;
+				align-self: flex-start;
+			}
+		}
+	}
+
+	// messages container
+	ul {
+		// better scroll bar for messages cont
+		&::-webkit-scrollbar {
+			width: 7px;
+			background: transparent;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: $scrollBarBg;
+			border-radius: 2px;
+		}
+	}
+
+	// send message input
+	.send-message {
+		input {
+			width: 85%;
+		}
+
+		svg {
+			margin-right: 0.5rem;
+			width: 1.3rem;
+			height: 1.3rem;
+			cursor: pointer;
+			fill: #737373;
+			transition: fill 0.15s ease;
+
+			&:hover {
+				fill: white;
+			}
+
+			&.input-focused {
+				fill: #a78bfa;
+			}
+		}
+	}
+}

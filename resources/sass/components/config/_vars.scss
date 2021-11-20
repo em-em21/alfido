@@ -1,0 +1,109 @@
+$blue: #80bdff;
+$sky-blue: #59dae2;
+$dark-blue: #0f767e;
+$white: #f2f3f7;
+$green: #3f9449;
+$mexican-red: #a71222;
+$gray: #999;
+
+// New (Alfido Invest)
+// Little design changes
+// New colors on dashboard:
+$accent: #20bd67;
+
+$bgPrimary: #121212;
+$bgSecondary: #1e1e1e;
+
+// ------------------------------------------------
+// ------- Admin dashboard new styles -------------
+// ------------------------------------------------
+
+// additional colors for triggers
+$info: #33c9dc;
+$deals: #6fbf73;
+$trans: #ff784e;
+
+// Cancel button bg
+$cancelBtn: #616161;
+
+// Override bootstrap colors to material ui dark colors
+$error: #cf6679;
+$success: #a5d6a7;
+$active: #ff9800;
+
+// Background colors material ui
+$bgSection: #212121;
+$bgSectionLighter: lighten(#1e1e1e, 2%);
+
+// Text
+$textPrimary: #fff;
+$textSecondary: #bdbdbd;
+
+@-ms-viewport {
+	width: device-width;
+}
+
+// ------------------------------------------------
+// ------- Admin dashboard new classes -------------
+// ------------------------------------------------
+
+.opacity-63 {
+	opacity: 0.63;
+}
+
+.text-secondary {
+	color: $textSecondary !important;
+}
+
+.text-primary {
+	color: $textPrimary !important;
+}
+
+.text-info {
+	color: $info !important;
+}
+
+.text-active {
+	color: $active !important;
+}
+
+.text-danger {
+	color: $error !important;
+}
+
+.btn-danger {
+	background: $error !important;
+	border: $error !important;
+	color: $bgSecondary !important;
+
+	&:hover {
+		background: darken($error, 25%) !important;
+		color: $white !important;
+	}
+}
+
+.text-success {
+	color: $success !important;
+}
+
+.btn-success {
+	background: $success !important;
+	border: $success !important;
+	color: $bgSecondary !important;
+
+	&:hover {
+		background: darken($success, 35%) !important;
+		color: $white !important;
+	}
+}
+
+// btn cancel
+.btn-cancel {
+	background: $cancelBtn;
+	color: white;
+
+	&:hover {
+		background: #424242;
+		color: white;
+	}
+}

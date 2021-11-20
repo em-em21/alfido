@@ -1,0 +1,523 @@
+@media screen and (max-width: 1250px) {
+	// nav
+	.loged-main_nav {
+		padding-left: 52px;
+		.nav-left,
+		.nav-right {
+			li {
+				a {
+					padding: 15px;
+					font-size: 14px;
+
+					svg {
+						width: 15px;
+						height: 15px;
+						margin-top: 4px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 980px) {
+	// top nav
+	.top-nav {
+		.rnbl {
+			li {
+				a,
+				span {
+					font-size: 15px;
+				}
+
+				span {
+					margin-top: 0 !important;
+				}
+			}
+
+			.nav-item__custom {
+				a {
+					font-size: 15px;
+				}
+			}
+		}
+	}
+
+	// main nav
+	.loged-main_nav {
+		.nav-left li a {
+			padding: 20px 15px;
+		}
+	}
+
+	// decrease padding on card els
+	.card-body {
+		padding: 5px !important;
+	}
+
+	// buy sell & widget modal
+	.bs-and-w_wrapper {
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 25px 0;
+
+		.card {
+			width: 49% !important;
+			margin-bottom: 0;
+
+			&.buy-sell_card {
+				max-height: 100%;
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.nav-left {
+		display: none !important;
+	}
+
+	.burger {
+		display: block;
+		margin: 10px 0;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.main-header,
+	.content-wrapper {
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
+
+	.loged-main_nav {
+		padding-right: 20px !important;
+		padding-left: 35px !important;
+	}
+}
+
+@media screen and (max-width: 770px) {
+	#deals-table_wrapper {
+		.row:first-child {
+			display: none;
+		}
+
+		.row:last-child {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			margin-top: 22px;
+
+			div {
+				max-width: 50%;
+				flex: 0 0 50%;
+
+				#deals-table_info {
+					padding-top: 0;
+				}
+
+				#deals-table_paginate {
+					margin: 0 15px 0 auto;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#pairs {
+		font-size: 15px;
+		padding: 7px 10px;
+		option {
+			font-size: 14px;
+		}
+	}
+}
+
+@media screen and (max-width: 470px) {
+	.content-wrapper {
+		.content {
+			padding: 0;
+			.col-lg-9 {
+				padding: 0;
+			}
+
+			.card-body {
+				padding: 0 !important;
+			}
+		}
+	}
+
+	.bs-and-w_wrapper {
+		flex-direction: column;
+		margin: 10px 0;
+
+		.card {
+			width: 100% !important;
+
+			&:first-child {
+				margin-bottom: 30px;
+			}
+
+			&:not(.buy-sell_card) {
+				min-height: 222px;
+			}
+		}
+	}
+
+	// sweet alert
+	.sweet-alert {
+		// max-width: 80vw;
+
+		h2 {
+			font-size: 20px;
+		}
+
+		button {
+			padding: 7px 15px;
+			font-size: 16px;
+		}
+
+		.icon {
+			display: none;
+		}
+	}
+
+	// table
+	.pagination {
+		li {
+			font-size: 13px;
+			font-weight: 400 !important;
+		}
+	}
+
+	#deals-table_wrapper .row:last-child div #deals-table_paginate {
+		margin: 0 40px 0 auto;
+	}
+}
+
+// JS Alert box 1 SM
+@media screen and (min-device-width: 320px) and (max-device-width: 500px) {
+	.alert-box {
+		.ab {
+			width: auto;
+
+			&_inner--msg {
+				font-weight: 500;
+			}
+		}
+
+		width: 90vw;
+		left: 5vw;
+		right: 5vw;
+	}
+}
+
+// JS Alert box 2 MD
+@media screen and (min-device-width: 500px) and (max-device-width: 800px) {
+	.alert-box {
+		.ab {
+			width: auto;
+
+			&_inner--msg {
+				font-weight: 500;
+			}
+		}
+
+		width: 60vw;
+		right: 6vw;
+	}
+}
+
+// JS Alert box 3 LG
+@media screen and (min-device-width: 800px) and (max-device-width: 1200px) {
+	.alert-box {
+		.ab {
+			width: auto;
+		}
+
+		width: 40vw;
+		right: 6vw;
+	}
+}
+
+// else
+
+@media screen and (min-device-width: 310px) and (max-device-width: 420px) {
+	// top nav
+	.main-header {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		.rnbl {
+			margin-left: 0 !important;
+		}
+	}
+
+	// main nav
+	.loged-main_nav {
+		#modalTrigger {
+			font-size: 12px !important;
+			padding: 8px 10px 6px 10px !important;
+		}
+
+		.ai_svg {
+			margin-top: 0 !important;
+		}
+
+		.burger {
+			margin: 7px 0;
+
+			&__trigger--lines,
+			&__trigger--lines::before,
+			&__trigger--lines::after {
+				width: 22px;
+				height: 1px;
+				background-color: white;
+			}
+		}
+	}
+}
+
+// Profile page /profile
+@media screen and (max-device-width: 670px) {
+	.nav-tabs {
+		// flex-wrap:wrap;
+
+		li {
+			// width: 50%;
+			a {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.content-wrapper {
+		.content {
+			.tab-content {
+				.card-body {
+					padding: 20px !important;
+				}
+			}
+		}
+	}
+
+	.tab-content {
+		.card-body {
+			.id-and-c-wrapper {
+				label,
+				span {
+					font-size: 14px !important;
+				}
+
+				div {
+					margin-bottom: 10px;
+				}
+			}
+
+			.form-group {
+				label,
+				input,
+				button {
+					font-size: 14px !important;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-device-width: 580px) {
+	.nav-tabs {
+		flex-wrap: wrap;
+
+		li {
+			width: 50%;
+
+			a {
+				text-align: center;
+			}
+		}
+	}
+
+	.pay-img_big {
+		width: 85px;
+	}
+
+	.img-upload-related {
+		input {
+			max-width: 88% !important;
+		}
+	}
+}
+
+@media screen and (max-device-width: 400px) {
+	.nav-tabs {
+		li {
+			width: 100%;
+
+			a {
+				padding: 12px 5px;
+			}
+		}
+	}
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 570px) {
+	// burger
+	.burger__nav {
+		min-width: 45vw;
+
+		padding-left: 30px;
+	}
+	// transactions
+	.income-wrapper {
+		margin-top: 25px;
+	}
+
+	.outcome-wrapper {
+		margin-bottom: 35px;
+	}
+
+	.income-wrapper,
+	.outcome-wrapper {
+		.dataTables_info {
+			margin-bottom: 20px;
+		}
+
+		.dataTables_wrapper {
+			.row:first-child {
+				display: none;
+			}
+		}
+
+		.pagination {
+			margin-bottom: 20px !important;
+		}
+	}
+}
+
+@media screen and (min-device-width: 570px) and (max-device-width: 950px) {
+	.burger__nav {
+		min-width: 30vw;
+
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+}
+
+// ICO
+@media screen and (max-device-width: 982px) {
+	.ico-wrapper {
+		.card-body {
+			padding: 15px !important;
+		}
+
+		.custom-border {
+			border-top: 2.5px solid #148882;
+		}
+	}
+}
+
+@media screen and (max-device-width: 771px) {
+	.ico-wrapper {
+		.inv-modal {
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+	}
+}
+@media screen and (max-device-width: 470px) {
+	.ico-wrapper {
+		padding: 0 !important;
+	}
+	.content-wrapper .content .ico-wrapper {
+		.card-body {
+			padding: 15px !important;
+		}
+		.inv-modal {
+			.card-header {
+				padding: 17px;
+				.title {
+					font-size: 22px;
+				}
+			}
+			.card-body {
+				padding-bottom: 30px !important;
+			}
+		}
+	}
+}
+
+// chatbox
+@media screen and (max-width: 1200px) {
+	.chat {
+		&__window {
+			&--inner {
+				.message {
+					.text {
+						font-size: 14px;
+					}
+				}
+			}
+
+			&--input {
+				input {
+					font-size: 15px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1000px) {
+	.chat {
+		left: 7vw;
+		&__header {
+			&--text {
+				font-size: 16px;
+			}
+		}
+		&__icons {
+			&--support {
+				width: 18px;
+				height: 18px;
+			}
+		}
+		&__window {
+			width: 290px;
+			&--inner {
+				.message {
+					padding: 10px;
+					.text {
+						font-size: 15px;
+					}
+				}
+			}
+
+			&--input {
+				input {
+					font-size: 15px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.chat {
+		left: 5vw;
+		right: 5vw;
+		&__window {
+			width: 90vw;
+			height: 50vh;
+			&--inner {
+				.message {
+					.text {
+						font-size: 15px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+.sweet-alert h2 {
+	font-size: 23px;
+	margin-bottom: 10px;
+}
+
+.sweet-alert p {
+	color: #2f2f2f;
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: 400;
+	font-style: italic;
+}
+
+.sweet-alert button {
+	font-size: 15px;
+	padding: 10px 20px;
+}
+
+// new
+.swal2-container {
+	z-index: 100000 !important;
+}

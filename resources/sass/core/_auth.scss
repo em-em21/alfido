@@ -1,0 +1,38 @@
+#layer-auth {
+	// All it does is just switches background image on login and register page
+	.auth-bg {
+		&__login {
+			background-image: url('/img/auth/bgs/1.jpg');
+			background-size: cover;
+		}
+
+		&__register {
+			background-image: linear-gradient(
+					to bottom,
+					rgba(black, 0.7),
+					rgba($bgPrimary, 0.3)
+				),
+				url('/img/auth/bgs/2.jpg');
+			background-size: 105% 105%;
+			background-repeat: no-repeat;
+		}
+	}
+
+	// Intl tel input plugin
+	// ref: https://github.com/jackocnr/intl-tel-input
+	// override path to images
+	.iti__flag {
+		background-image: url('/img/auth/intl-tel-input/flags.png') !important;
+	}
+
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+		.iti__flag {
+			background-image: url('/img/auth/intl-tel-input/flags@2x.png') !important;
+		}
+	}
+
+	// set full width for input by setting full width for cont too
+	.iti {
+		width: 100%;
+	}
+}

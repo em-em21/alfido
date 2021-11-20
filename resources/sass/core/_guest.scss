@@ -1,0 +1,13 @@
+#layer-guest {
+	// page headers backgrounds
+	@import './../components/includes/guest/page-headers-bgs';
+
+	// navigation
+	@import './../components/includes/guest/nav';
+
+	// bens
+	@import './../components/includes/guest/index/partials/bens';
+
+	// payments alt
+	@import './../components/includes/guest/index/partials/payments-alt';
+}

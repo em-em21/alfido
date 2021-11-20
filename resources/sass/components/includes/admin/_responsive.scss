@@ -1,0 +1,295 @@
+/**
+* DataTables
+*/
+
+// data tables responsive mode ul li
+.dtr-details {
+	width: 100%;
+
+	.dtr-title {
+		font-weight: 400 !important;
+		color: white;
+	}
+
+	li {
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+	}
+}
+
+// 15px under pagination
+@media screen and (max-width: 725px) {
+	.dataTables_info {
+		margin-bottom: 15px;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 777px) {
+	.container-fluid {
+		padding: 20px !important;
+	}
+	#dataTable_wrapper {
+		.row:first-child,
+		.row:last-child {
+			.col-sm-12 {
+				max-width: 50%;
+				width: 50%;
+				flex: auto;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+			}
+
+			.col-sm-12:last-child {
+				justify-content: flex-end;
+			}
+		}
+		.dataTables_length,
+		.dataTables_filter {
+			width: 100%;
+		}
+		.dataTables_length {
+			display: flex;
+			justify-content: flex-start;
+			label {
+				margin-bottom: 0;
+			}
+		}
+		.dataTables_paginate {
+			margin-top: 20px;
+		}
+	}
+
+	// Gallery
+	.gallery {
+		&-item {
+			width: 30.33%;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.container-fluid {
+		padding: 0;
+	}
+	.page-title {
+		margin-left: 13px;
+	}
+	.dataTables_length {
+		display: flex;
+		justify-content: flex-start;
+	}
+	.dataTables_filter {
+		display: flex;
+		justify-content: flex-end;
+	}
+	// Gallery
+	.gallery {
+		&-item {
+			width: 47%;
+		}
+	}
+	// hide calculator on mob
+	.cc-wrapper {
+		.calculator {
+			display: none;
+		}
+	}
+}
+
+// align search bar to the end
+@media screen and (min-width: 320px) and (max-width: 500px) {
+	.dataTables_length {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+// responsive mode li column
+@media screen and (max-width: 400px) {
+	td.child {
+		padding: 5px;
+		.dtr-details {
+			li {
+				flex-direction: column;
+				.dtr-title {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+	// Gallery
+	.gallery {
+		&-item {
+			width: 100%;
+			margin: 5px 0 10px;
+		}
+
+		&-img_img {
+			width: 100%;
+		}
+	}
+}
+
+// conv & calc // testimonials {/testimonials}
+@media screen and (max-width: 1000px) {
+	// conv calc
+	.cc-wrapper {
+		display: flex;
+		flex-direction: column;
+		.converter {
+			width: 100%;
+			max-width: 100%;
+			flex: 0 0 100%;
+			margin: 0 !important;
+		}
+		.calculator {
+			margin-top: 50px;
+		}
+	}
+}
+
+@media screen and (max-width: 530px) {
+	.page-descr {
+		font-size: 15px;
+	}
+	.test-item {
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 10px;
+
+		&__wrapper {
+			padding: 10px;
+		}
+
+		&__info,
+		&__test {
+			width: 100%;
+		}
+
+		&__info {
+			margin-bottom: 20px;
+		}
+
+		&__test {
+			p {
+				font-size: 15px;
+			}
+			h4 {
+				font-size: 22px;
+			}
+		}
+	}
+}
+
+// chatbox
+@media screen and (max-width: 1200px) {
+	.chat {
+		width: 100%;
+		&__users {
+			&--item-right {
+				.ir--name {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.chat {
+		&__window {
+			padding: 7px;
+			&--messages {
+				height: calc(100%-50px);
+				max-height: calc(100%-50px);
+			}
+			&--input {
+				max-height: 40px;
+				height: 40px;
+				width: 100%;
+			}
+			&--inner {
+				.chat-info {
+					&-svgs {
+						width: 100px;
+						height: 100px;
+					}
+					&-texts {
+						font-size: 17px;
+						margin-top: 33px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.chat {
+		margin-top: 0px;
+		height: 78vh;
+		&__users {
+			width: 90%;
+		}
+		&__window {
+			width: 90%;
+		}
+	}
+
+	// ticker widget nav
+	.nav-right {
+		padding-right: 0.5rem !important;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.chat {
+		&__window {
+			&--inner {
+				.message {
+					max-width: 90%;
+					.text {
+						font-size: 15px;
+					}
+				}
+			}
+
+			&--input {
+				input {
+					width: 85%;
+				}
+				#submitMessage {
+					width: 15%;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.chat {
+		&__window {
+			&--input {
+				input {
+					font-size: 15px;
+					padding: 5px;
+				}
+			}
+		}
+	}
+}
+
+// widget
+@media screen and (max-width: 640px) {
+	.nav-right {
+		max-width: 40%;
+	}
+}
+@media screen and (max-width: 560px) {
+	.nav-right {
+		max-width: 100%;
+		width: 100%;
+	}
+}

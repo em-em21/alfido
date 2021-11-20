@@ -1,0 +1,111 @@
+// hide components before alpine gets initialised
+[x-cloak] {
+	display: none;
+}
+
+// set 15px for rems
+html {
+	body {
+		font-size: 15px;
+		font-display: optional;
+		font-family: 'system';
+	}
+
+	button {
+		&:focus {
+			outline: 1px solid rgba(white, 0.3) !important;
+			box-shadow: rgba(#7ec8e3, 0.05) 0px 6px 24px 0px,
+				rgba(#7ec8e3, 0.08) 0px 0px 0px 1px !important;
+		}
+	}
+
+	// app logo (user, admin pages)
+	.logo {
+		width: 2rem;
+		height: 2rem;
+		object-fit: cover;
+		object-position: center;
+		max-width: 2rem;
+
+		&-block {
+			width: 5rem;
+			height: 3rem;
+		}
+	}
+
+	// make div darker when sidebar is toggled
+	.darken {
+		filter: brightness(25%);
+	}
+
+	// Platform pages
+	.bs_widget_wrapper {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(15, 1fr);
+		grid-gap: 1.5rem;
+
+		/// Advanced Chart Wrapper
+		& > div:first-child {
+			grid-column: 1 / 13;
+		}
+
+		/// Buy-sell and small widget
+		& > div:last-child {
+			grid-column: 13 / -1;
+			height: 100%;
+			display: grid;
+			grid-template-rows: 1.3fr 1.7fr;
+			grid-gap: 1.5rem;
+		}
+	}
+
+	@media screen and (max-width: 1280px) {
+		// XL https://tailwindcss.com/docs/responsive-design
+
+		.bs_widget_wrapper {
+			& > div:first-child {
+				grid-column: 1 / 12;
+			}
+
+			& > div:last-child {
+				grid-column: 12 / -1;
+			}
+		}
+	}
+
+	@media screen and (max-width: 1024px) {
+		// LG https://tailwindcss.com/docs/responsive-design
+
+		.bs_widget_wrapper {
+			grid-gap: 1rem;
+
+			& > div:first-child {
+				grid-column: 1 / 11;
+			}
+
+			& > div:last-child {
+				grid-column: 11 / -1;
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		// MD https://tailwindcss.com/docs/responsive-design
+
+		.bs_widget_wrapper {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(2, 1fr);
+
+			& > div:first-child,
+			& > div:last-child {
+				grid-column: 1 / -1;
+			}
+
+			& > div:last-child {
+				width: 100%;
+				grid-template-columns: 1fr;
+			}
+		}
+	}
+}

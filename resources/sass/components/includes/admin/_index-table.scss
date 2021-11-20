@@ -1,0 +1,612 @@
+// card header bg
+.card-header__green {
+	background: #242424;
+	color: $success;
+
+	&:hover {
+		background: #242424;
+	}
+}
+
+.collapsed-card {
+	.card-header__green {
+		background: #1e1e1e;
+	}
+}
+
+// Trigger modal
+.sections-triggers {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	&__btn {
+		@include flex-center(row);
+		padding: 0.3rem;
+		outline: none !important;
+		border: none;
+		border-radius: 3px;
+		transition: background 0.15s ease-out, color 0.15s ease-in;
+		color: $bgSecondary;
+		font-size: 1rem;
+
+		&--info {
+			border: 1px solid $info;
+			color: $info;
+			background: transparent;
+
+			&:hover {
+				color: $white;
+				background: #008394;
+				border-color: #008394;
+			}
+		}
+	}
+}
+
+// Create New User Instance
+.create-user {
+	width: 100%;
+	height: 100%;
+	margin-bottom: 2rem;
+	display: block;
+
+	&__btn {
+		width: 100%;
+		height: 100%;
+		@include flex-center(row);
+		padding: 1rem;
+		border: 1px dashed $success;
+		outline: none !important;
+		border-radius: 7px;
+		background: transparent;
+		color: $success;
+		font-size: 1.1rem;
+		transition: all 0.15s ease-out;
+
+		&:hover {
+			color: lighten($success, 50%);
+			border-color: lighten($success, 50%);
+		}
+
+		&:focus,
+		&:active {
+			color: $info;
+			border-color: $info !important;
+		}
+	}
+}
+
+// Customer mdal Overlay
+.customer-modal-layout {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	@include flex-center(row);
+	z-index: 99999;
+	background: rgba(black, 0.7);
+
+	.customer-modal {
+		width: 90vw;
+		height: 90vh;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		border-radius: 10px;
+		overflow: hidden;
+
+		// root modal loader
+		&__loader {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			background: #191919;
+			z-index: 9999;
+			@include flex-center(row);
+
+			.spinner-wrapper {
+				.spinner {
+					width: 3rem;
+					height: 3rem;
+					border: 4px solid transparent;
+					border-top-color: rgba(white, 0.75);
+					border-bottom-color: rgba(white, 0.75);
+					border-radius: 50%;
+					animation: loader-rotate 0.4s linear infinite;
+				}
+
+				@keyframes loader-rotate {
+					0% {
+						transform: rotate(0);
+					}
+
+					100% {
+						transform: rotate(360deg);
+					}
+				}
+			}
+		}
+
+		// TABS
+		&__tabs {
+			width: 100%;
+			height: 2.5rem;
+			display: flex;
+			border-bottom: 1px solid rgba($textSecondary, 0.3);
+
+			button {
+				flex: 1;
+				outline: none !important;
+				border: none !important;
+				background: #212121;
+				color: $textSecondary;
+				font-weight: 500;
+				font-size: 1.1rem;
+
+				&:hover {
+					background: #252525;
+				}
+
+				&.active {
+					background: #333;
+					color: $textPrimary;
+				}
+			}
+		}
+
+		// SECTIONS
+		&__sections {
+			width: 100%;
+			height: calc(90vh - 2.5rem);
+			@include flex-center(row);
+
+			& > div {
+				width: 100%;
+				height: 100%;
+			}
+
+			// MODAL
+			.section {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				background: #1e1e1e;
+				overflow-y: auto;
+				&::-webkit-scrollbar {
+					width: 6px;
+				}
+
+				&::-webkit-scrollbar-track {
+					background: transparent;
+					box-shadow: 0 0 15px #252525 inset;
+				}
+
+				&::-webkit-scrollbar-thumb {
+					background: rgba($textSecondary, 0.5);
+				}
+
+				// MODAL PART (common between header body footer)
+				&__part {
+					width: 100%;
+				}
+
+				// MODAL HEADER
+				&__header {
+					padding: 3rem 2rem 0;
+
+					// title
+					&--title {
+						font-size: 1.4rem;
+						font-weight: 400;
+						color: rgba($textSecondary, 0.7);
+						margin: 0;
+
+						span {
+							font-weight: 400;
+							color: white;
+						}
+					}
+				}
+
+				// MODAL BODY
+				&__body {
+					margin: 0 auto;
+					padding: 15px 30px;
+
+					.section-title {
+						font-size: 1.3rem;
+						color: rgba(white, 0.5);
+					}
+
+					.btn-more {
+						margin-right: 0.5rem;
+						background: $info;
+
+						&:hover {
+							i {
+								color: white;
+							}
+							background: darken($info, 25%);
+						}
+					}
+
+					// INFO
+					.list-group {
+						width: 100%;
+						display: grid;
+						grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
+						// background: $bgSectionLighter;
+						background: #303030;
+						overflow: hidden;
+						border-radius: 5px;
+						border: 1px solid rgba($white, 0.05);
+						box-shadow: 0 0 5px 0 black;
+
+						&-item {
+							background: $bgSectionLighter;
+							display: flex;
+							align-items: center;
+							border-bottom: 1px solid rgba($white, 0.05);
+
+							p {
+								display: inline-flex;
+								align-items: center;
+								margin-left: 0.5rem;
+								margin-bottom: 0;
+								color: rgba($white, 0.88);
+							}
+
+							.text-muted {
+								color: rgba($white, 0.5) !important;
+							}
+
+							&--svg {
+								width: 14px;
+								height: 15px;
+								fill: $success;
+								margin-top: 1px;
+							}
+						}
+
+						// EDIT iNFO
+						&.edit-info {
+							grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+							grid-gap: 10px;
+
+							.form-group {
+								display: flex;
+								flex-direction: column;
+								padding: 10px;
+								margin-bottom: 0;
+
+								&.with-text-area {
+									grid-column: 1 / -1;
+								}
+
+								// background for radio options
+								.radio-options {
+									background: lighten($bgSecondary, 5%);
+									padding: 10px;
+									border: 1px solid rgba($textSecondary, 0.3);
+									border-radius: 5px;
+								}
+
+								label {
+									color: $white;
+								}
+
+								input {
+									width: auto;
+									border: 1px solid rgba($white, 0.4);
+									// padding: 1.3rem 1rem;
+
+									&:focus {
+										color: $white !important;
+										border-color: rgba($white, 0.8);
+										box-shadow: 0 0 5px 0 $blue;
+									}
+								}
+
+								select {
+									background: #2b2b2b;
+									color: $textSecondary;
+									border: 1px solid rgba($white, 0.4);
+
+									&:focus {
+										color: $white !important;
+										border-color: rgba($white, 0.5);
+										box-shadow: 0 0 5px 0 $blue;
+									}
+
+									option:hover {
+										color: $textPrimary;
+									}
+								}
+
+								// radio
+								.form-check {
+									input {
+										margin-top: 0.4rem;
+
+										&:checked + label {
+											color: $white;
+										}
+
+										&:focus,
+										&:active {
+											box-shadow: none;
+										}
+									}
+
+									label {
+										color: rgba($white, 0.6);
+									}
+								}
+							}
+						}
+					}
+
+					// DEALS
+					// so table wont span full height
+					.table-wrapper_new {
+						height: auto;
+					}
+
+					// make font smaller for created_at & updated_at
+					.timestamps {
+						font-size: 0.9rem;
+
+						span:first-child {
+							color: rgba($white, 0.8);
+						}
+
+						span:last-child {
+							color: rgba($deals, 0.6);
+						}
+					}
+
+					// input field for fast profit edit
+					.profit-input {
+						background: transparent;
+						color: rgba(white, 0.8);
+						text-decoration: underline;
+						padding: 0;
+						width: 9rem;
+						&:hover {
+							color: white;
+						}
+
+						&:focus,
+						&:active {
+							background: rgba(white, 0.09);
+							outline: none;
+							text-decoration: none;
+							color: white;
+						}
+					}
+
+					// TRANSACTIONS
+					.transactions {
+						// --- Create transaction
+						.card {
+							margin: 10px 0;
+							width: 50%;
+
+							&-body {
+								background: #272727;
+							}
+						}
+
+						// --- Show transactions
+
+						&__amount {
+							display: flex;
+							align-items: center;
+
+							span {
+								margin: 0 0 0.9px 2px;
+							}
+						}
+					}
+
+					// transaction create form media
+					@media screen and (max-width: 833px) {
+						.transactions {
+							.card {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		// CLOSE MODAL
+		&__close {
+			position: fixed;
+			right: 10px;
+			top: 10px;
+			outline: none !important;
+			border: none;
+			background: transparent;
+			cursor: pointer;
+			z-index: 100;
+
+			&:hover {
+				svg {
+					fill: $textPrimary;
+				}
+			}
+
+			svg {
+				width: 2rem;
+				height: 2rem;
+				fill: $textSecondary;
+			}
+		}
+	}
+}
+
+// comments (:
+.comments {
+	grid-template-columns: 1fr !important;
+
+	li:hover {
+		background: rgba(white, 0.03) !important;
+	}
+}
+
+// Responsive simple table
+// used instead of datatable because livewire cant reinit components on rerender
+.simple-table {
+	border-radius: 7px;
+	border: 1px solid $bgSecondary;
+	overflow: hidden;
+
+	tr {
+		display: flex;
+		flex-direction: row;
+	}
+
+	thead th {
+		border-top: 1px solid rgba($textSecondary, 0.7) !important;
+	}
+
+	th,
+	td {
+		display: block;
+		flex: 1 1 0;
+	}
+
+	thead {
+		background: #212121;
+		color: $textPrimary;
+
+		th {
+			font-weight: 500;
+		}
+	}
+
+	tbody {
+		tr {
+			background: #191919;
+
+			&:hover {
+				background: rgba(white, 0.01) !important;
+			}
+
+			td {
+				padding-top: 0.5rem !important;
+				padding-bottom: 0.5rem !important;
+				color: $textSecondary;
+			}
+		}
+	}
+}
+
+// managers table, highlight selected manager row
+.selected-manager {
+	border: 1px solid rgba($info, 0.75) !important;
+	opacity: 0.5 !important;
+}
+
+// simple table media
+@media screen and (max-width: 900px) {
+	.simple-table {
+		tr {
+			flex-direction: column;
+			margin-bottom: 10px;
+			display: block;
+		}
+
+		td {
+			float: left\9;
+			width: 100%;
+		}
+	}
+}
+
+// responsive --------------------
+
+// sections common
+@media screen and (max-width: 430px) {
+	.sections {
+		.section__part {
+			padding: 1rem 1.1rem;
+		}
+
+		.section__header {
+			&--title {
+				font-size: 1.1rem;
+
+				span {
+					display: block;
+					margin-top: 0.5rem;
+				}
+			}
+		}
+
+		.section__body {
+			.list-group-item {
+				padding: 0.8rem 1rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	// DataTables little responsive config
+	.dtr-details li {
+		flex-wrap: wrap !important;
+	}
+}
+
+// info
+@media screen and (max-width: 800px) {
+	.sections {
+		.section__body {
+			.list-group {
+				grid-template-columns: 1fr;
+			}
+		}
+	}
+
+	.info-buttons {
+		flex-direction: column;
+
+		div {
+			width: 100%;
+
+			&:last-child {
+				margin-top: 1rem;
+				justify-content: flex-end !important;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 474px) {
+	.info-buttons {
+		align-items: flex-start !important;
+
+		div:first-child {
+			width: auto;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+
+			button:first-child {
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
+}

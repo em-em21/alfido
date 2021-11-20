@@ -1,0 +1,64 @@
+.benefits {
+	position: relative;
+
+	// design thingy
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		background: -webkit-linear-gradient(
+			-10deg,
+			rgb(112, 90, 158) 0%,
+			rgb(89, 111, 177) 63%,
+			rgb(128, 175, 213) 100%
+		);
+		left: -60%;
+		right: 56.2%;
+		top: 0;
+		bottom: 0;
+		transform: skew(-26.8deg, 0);
+		z-index: -1;
+	}
+
+	// benefits links
+	.ben-link {
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -6px;
+			height: 3.5px;
+			background-color: white;
+			display: block;
+			width: 0%;
+			transition: 0.4s all;
+			visibility: hidden;
+			opacity: 0;
+		}
+
+		&.active::after {
+			width: 100%;
+			visibility: visible;
+			opacity: 1;
+		}
+
+		&:hover::after {
+			width: 100%;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}
+
+@media screen and (max-width: 49rem) {
+	.benefits::before {
+		right: -5%;
+	}
+}
+
+@media screen and (max-width: 38rem) {
+	.benefits::before {
+		right: -55%;
+	}
+}

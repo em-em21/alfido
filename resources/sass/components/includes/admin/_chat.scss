@@ -1,0 +1,339 @@
+.chat {
+	width: 80%;
+	height: 75vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 3vh auto 0;
+
+	// extra wrapper for styling purpose
+	&__inner {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		border-radius: 5px;
+		border: 1px solid #131313;
+		box-shadow: 0px 1px 7px 0px #131313;
+	}
+
+	// users list
+	&__users {
+		width: 30%;
+		max-height: 100%;
+		background: rgba(0, 0, 0, 0.5);
+
+		&.hide {
+			// respon
+			display: none;
+		}
+
+		// inner
+		&--inner {
+			width: 100%;
+			max-height: 100%;
+			overflow-x: hidden;
+			overflow-y: auto;
+			// scroll bar
+			&::-webkit-scrollbar {
+				width: 7px;
+				background: transparent;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background: rgba(255, 255, 255, 0.1);
+				border-radius: 3px;
+			}
+		}
+
+		// users ul
+		&--list {
+			display: flex;
+			flex-direction: column;
+			list-style: none;
+		}
+
+		// list item
+		&--item {
+			display: flex;
+			align-items: center;
+			padding: 5px 5px 5px 15px;
+			width: 100%;
+			position: relative;
+			transition: background 0.25s ease;
+			background: rgb(38, 43, 43);
+			border-bottom: 1px solid #000;
+
+			&:hover {
+				background: rgba(darkslategrey, 0.5);
+			}
+
+			&.active {
+				background: darkslategrey;
+
+				.ir--name {
+					color: rgba(255, 255, 255, 0.8);
+				}
+				svg {
+					fill: rgba(255, 255, 255, 0.8);
+				}
+			}
+
+			.pending {
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				width: 18px;
+				height: 18px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				background: $blue;
+				color: white;
+				font-size: 14px;
+			}
+
+			&-left {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				background: #171717;
+				width: 48px;
+				height: 48px;
+				svg {
+					width: 24px;
+					height: 24px;
+					fill: lighten($blue, 5%);
+				}
+			}
+
+			&-right {
+				width: 65%;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				padding: 8px 8px 8px 11px;
+
+				.ir {
+					&--name {
+						font-weight: 400;
+						font-size: 18px;
+						margin-bottom: 0;
+						color: rgba(lighten($blue, 5%), 0.8);
+					}
+
+					&--email {
+						font-weight: 400;
+						font-size: 15px;
+						margin-bottom: 0;
+						color: rgba(255, 255, 255, 0.6);
+					}
+				}
+			}
+		}
+	}
+
+	// chat box window
+	&__window {
+		width: 70%;
+		max-height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background: rgba(0, 0, 0, 0.3);
+		padding: 20px;
+
+		&.hide {
+			// respon
+			display: none;
+		}
+
+		&--inner {
+			flex: 1 1 90%;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+			padding: 10px;
+			border-radius: 3px;
+			overflow: auto;
+			position: relative;
+
+			// info alerts common styles
+			.chat-info {
+				margin-bottom: 0;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				&-svgs {
+					opacity: 0.4;
+					width: 130px;
+					height: 130px;
+				}
+
+				&-texts {
+					display: block;
+					text-align: center;
+					width: 100%;
+					margin-top: 30px;
+					font-size: 19px;
+					color: rgba(255, 255, 255, 0.8);
+				}
+			}
+
+			.message {
+				display: block;
+				max-width: 60%;
+				margin: 7px 10px 10px 10px;
+				padding: 7px;
+				border-radius: 3px;
+				flex: 0;
+				clear: both;
+				position: relative;
+
+				.text {
+					display: block;
+					font-size: 16px;
+					word-break: break-all;
+				}
+
+				.date {
+					font-size: 13px;
+					margin-bottom: 0;
+				}
+
+				// bubble arrows base
+				&.sent::before,
+				&.received::after {
+					content: '';
+					position: absolute;
+					width: 0;
+					height: 0;
+					border-top: 7px solid transparent;
+					border-bottom: 7px solid transparent;
+				}
+
+				&.sent {
+					margin: 10px 10px 10px auto;
+					background: #19769e;
+					color: white;
+					&::before {
+						left: 100%;
+						bottom: 8px;
+						border-left: 14px solid #19769e;
+					}
+					.date {
+						align-self: flex-end;
+						color: rgba(255, 255, 255, 0.7);
+					}
+				}
+
+				&.received {
+					margin: 10px auto 10px 10px;
+					background: $green;
+					color: white;
+					&::after {
+						right: 100%;
+						top: 8px;
+						border-right: 14px solid $green;
+					}
+					.date {
+						align-self: flex-start;
+						color: rgba(255, 255, 255, 0.7);
+					}
+				}
+			}
+
+			// scroll bar
+			&::-webkit-scrollbar {
+				width: 5px;
+				background: transparent;
+			}
+			&::-webkit-scrollbar-thumb {
+				background: rgba(#19769e, 0.5);
+				border-radius: 2px;
+			}
+		}
+
+		&--messages {
+			display: flex;
+			width: 100%;
+			max-height: 90%;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+			background-color: #252525;
+		}
+
+		&--input {
+			width: 100%;
+			margin: 0 auto;
+			max-height: 10%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background: white;
+			transition: box-shadow 1s ease;
+			border-radius: 5px;
+			overflow: hidden;
+			border: none !important;
+
+			input {
+				width: 90%;
+				height: 100%;
+				padding: 10px;
+				border: none;
+				outline: none;
+				transition: background 0.25s ease;
+				color: white;
+				background: #171717;
+			}
+
+			#submitMessage {
+				width: 10%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: darken($blue, 5%);
+				outline: none;
+				border: none;
+				transition: background 0.25s ease, width 0.25s ease;
+
+				svg {
+					width: 20px;
+					height: 20px;
+					fill: white;
+				}
+
+				&:hover {
+					background: white;
+					svg {
+						width: 20px;
+						height: 20px;
+						fill: darken($blue, 5%);
+					}
+				}
+			}
+		}
+	}
+
+	// responsive
+	&__menu {
+		width: 10%;
+		@import './../user/partials/chat/burger';
+		.burger {
+			&__trigger {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}

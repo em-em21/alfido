@@ -1,0 +1,5 @@
+x-transition:enter="transition ease-out duration-100"
+x-transition:enter-start="opacity-0 transform scale-y-50"
+x-transition:enter-end="opacity-100 transform scale-y-100"
+x-transition:leave="transition ease-in duration-100"
+x-transition:leave-end="opacity-0 transform scale-y-50"

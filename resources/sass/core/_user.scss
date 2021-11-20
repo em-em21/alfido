@@ -1,0 +1,34 @@
+#layer-user {
+	* {
+		&::-webkit-scrollbar {
+			width: 6px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: transparent;
+			box-shadow: 0 0 15px #252525 inset;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: #b39ddb;
+		}
+	}
+
+	// have container wider for platform to look bigger
+	.container {
+		padding-left: 1rem !important;
+		padding-right: 1rem !important;
+	}
+
+	// payment modal
+	@import './../components/includes/user/partials/pay_modal';
+
+	// buy/sell
+	@import './../components/includes/user/partials/buysell_modal';
+
+	// spinner
+	@import './../components/includes/user/partials/spinner';
+
+	// datatables bootstrap injection
+	@import './../components/includes/user/partials/datatables/datatables';
+}

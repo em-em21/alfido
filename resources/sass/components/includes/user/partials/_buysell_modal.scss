@@ -1,0 +1,88 @@
+.switch-field {
+	display: flex;
+	width: 100%;
+	overflow: hidden;
+
+	input {
+		position: absolute !important;
+		clip: rect(0, 0, 0, 0);
+		height: 1px;
+		width: 1px;
+		border: 0;
+		overflow: hidden;
+	}
+
+	label {
+		width: 50%;
+		line-height: 1;
+		font-size: 17px;
+		font-weight: 500 !important;
+		text-align: center;
+		padding: 10px 25px;
+		border-radius: 5px;
+		margin-bottom: 0;
+
+		transition: all 0.1s ease-in-out;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.switch-field .buy + label,
+.switch-field .sell + label {
+	-webkit-box-shadow: inset 1px 0px 22px -18px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: inset 1px 0px 22px -18px rgba(0, 0, 0, 0.75);
+	box-shadow: inset 1px 0px 22px -18px rgba(0, 0, 0, 0.75);
+}
+
+.switch-field .buy + label {
+	color: $white;
+	border: 1px solid #166534;
+}
+
+.switch-field .sell + label {
+	color: $white;
+	border: 1px solid #981b1b;
+}
+
+.switch-field .buy.checked + label {
+	color: #166534;
+	box-shadow: none;
+	width: 80%;
+	margin-right: 2px;
+	transition: width 0.2s ease-in;
+}
+
+.switch-field .sell.checked + label {
+	color: #981b1b;
+	box-shadow: none;
+	width: 80%;
+	margin-left: 2px;
+	transition: width 0.2s ease-in;
+}
+
+.switch-field label:first-of-type {
+	border-radius: 4px 0 0 4px;
+}
+
+.switch-field label:last-of-type {
+	border-radius: 0 4px 4px 0;
+}
+
+// #value input
+#value {
+	background: #232323;
+}
+// hide arrows from #value inp
+/* For Firefox */
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+/* Webkit browsers like Safari and Chrome */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}

@@ -1,0 +1,25 @@
+@mixin flex-around($dir) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: $dir;
+}
+
+@mixin flex-center($dir) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $dir;
+}
+
+@mixin flex-between($dir) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: $dir;
+}
+
+@mixin flex-column() {
+    display: flex;
+    flex-direction: column;
+}

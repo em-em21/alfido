@@ -1,0 +1,118 @@
+// Gradients & image combinations for headers
+@mixin background() {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+// Hero section gradient
+.hero {
+	background: linear-gradient(
+		-45deg,
+		darken(#eaafc8, 25%),
+		darken(#5d26c1, 25%),
+		darken(#654ea3, 25%),
+		darken(#302b63, 25%)
+	);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+// algotrading
+.algo-header {
+	background: linear-gradient(
+			to bottom,
+			rgba(darken(#654ea3, 40%), 0.5),
+			rgba(darken(#eaafc8, 40%), 0.5)
+		),
+		url('/img/guest/bgs/algotrading.jpg');
+	@include background;
+}
+
+// account types
+.acctypes-header {
+	background: linear-gradient(
+			to bottom,
+			rgba(darken(#654ea3, 40%), 0.5),
+			rgba(darken(#eaafc8, 40%), 0.5)
+		),
+		url('/img/guest/bgs/account-types.jpg');
+	@include background;
+}
+
+.acctypes-islam {
+	background: linear-gradient(
+			to right,
+			rgba($bgPrimary, 0.8),
+			rgba($bgSecondary, 0.8)
+		),
+		url('/img/guest/bgs/account-types-islam.png');
+	@include background;
+}
+
+// eco calendar
+.eco-header {
+	background: linear-gradient(
+			to bottom,
+			rgba(darken(#654ea3, 40%), 0.5),
+			rgba(darken(#eaafc8, 40%), 0.5)
+		),
+		url('/img/guest/bgs/eco-calendar.jpg');
+	@include background;
+}
+
+// tech analysis
+.analysis-header {
+	background: linear-gradient(
+			to bottom,
+			rgba(darken(#654ea3, 40%), 0.5),
+			rgba(darken(#eaafc8, 40%), 0.5)
+		),
+		url('/img/guest/bgs/analysis.png');
+	@include background;
+}
+
+// contacts
+.contacts-header {
+	background: linear-gradient(
+			to bottom,
+			rgba(darken(#654ea3, 40%), 0.5),
+			rgba(darken(#eaafc8, 40%), 0.5)
+		),
+		url('/img/guest/bgs/contacts.jpeg');
+	@include background;
+}
+
+// about
+.about-header {
+	background: linear-gradient(
+			to bottom,
+			rgba(darken(#654ea3, 40%), 0.5),
+			rgba(darken(#eaafc8, 40%), 0.5)
+		),
+		url('/img/guest/bgs/about.jpg');
+	@include background;
+}
+
+// Call to action background
+.cta {
+	background: linear-gradient(
+			to bottom,
+			rgba($bgSecondary, 0.5),
+			rgba(#4e2536, 0.5)
+		),
+		url('/img/guest/bgs/cta.jpeg');
+	@include background;
+}

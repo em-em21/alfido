@@ -1,0 +1,114 @@
+// else
+.table th {
+	font-weight: 400;
+}
+
+.form-group label {
+	font-weight: 400 !important;
+}
+
+.modal-body {
+	font-weight: 400 !important;
+}
+
+// widget
+#tvchart {
+	height: 540px !important;
+}
+
+// data table responsive
+.dtr-details {
+	width: 100%;
+
+	.dtr-title {
+		font-weight: 400 !important;
+		color: white;
+	}
+
+	li {
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+	}
+}
+
+// dark
+.dark {
+	.c-span {
+		color: rgba(255, 255, 255, 0.8);
+	}
+	.algo-mode {
+		color: white;
+	}
+	.algo-title {
+		color: white !important;
+	}
+	.checkmark {
+		stroke: #20c997;
+		box-shadow: inset 0px 0px 0px #20c997;
+	}
+	.verified-text_success {
+		color: rgba(255, 255, 255, 0.8);
+	}
+	.checkmark__circle {
+		stroke: #20c997;
+		fill: #222222;
+	}
+}
+
+/* ==== Side Bar ==== */
+/* Hide scrollbar for Chrome, Safari and Opera */
+.sidebar::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.sidebar {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+// custom border
+.custom-border {
+	border-top: 1.5px solid #148882;
+}
+
+// tv chart switcher
+#pairs {
+	position: relative;
+	outline: none;
+	padding: 10px;
+	background: #191919;
+	color: white;
+	font-weight: 600;
+	border: 0;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+
+	option {
+		font-weight: 400;
+		line-height: 1.4;
+	}
+	&::-webkit-scrollbar {
+		width: 7px;
+	}
+	&::-webkit-scrollbar-track {
+		background: #252525;
+		box-shadow: 0 0 35px rgba(0, 0, 0, 0.2) inset;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: #153353;
+		border-radius: 1px;
+		border: 1px solid #252525;
+	}
+}
+
+.algo-mode {
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.card {
+	// this is only for /trade/ pages
+	background: $bgPrimary !important;
+}

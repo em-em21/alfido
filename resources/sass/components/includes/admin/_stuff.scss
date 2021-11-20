@@ -1,0 +1,161 @@
+// nav, sidebar nav
+.navbar {
+  &.main-header {
+    background: $bgSecondary;
+    border-bottom: 1px solid rgba($textSecondary, 0.3);
+
+    .nav-link {
+      border-radius: 5px;
+
+      &:active,
+      &:focus {
+        color: $success !important;
+        background: transparent !important;
+      }
+    }
+  }
+}
+
+.nav {
+  &-link {
+    color: $textSecondary !important;
+    transition: background 0.15s ease-in;
+
+    &:hover {
+      color: $textPrimary !important;
+      background: rgba(white, 0.05) !important;
+    }
+
+    &.active {
+      background-color: $success !important;
+      color: $bgPrimary !important;
+    }
+  }
+}
+
+// change padding on all pages
+.container-fluid {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+// content-wrapper bg
+.content-wrapper {
+  background: #282828;
+}
+
+// header h3-h4 on all pages
+.page-title {
+  color: $textPrimary;
+  font-weight: 600;
+  margin: 0 0 0 50px;
+  padding: 20px 15px 10px 15px;
+  font-size: 2rem;
+
+  &--sm {
+    color: $textPrimary;
+  }
+
+  span {
+    // admin {/payments} pages
+    color: $textSecondary;
+  }
+}
+
+// modals
+.modal {
+  &-content {
+    background: $bgSecondary;
+    color: $textPrimary !important;
+  }
+
+  &-header {
+    border-bottom: 1px solid rgba(#e9ecef, 0.1);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $textPrimary;
+    }
+
+    button {
+      outline: none;
+
+      span {
+        color: white;
+      }
+    }
+  }
+  &-title {
+    font-weight: 400;
+  }
+
+  &-scrollbar-measure {
+    // Prevent page from jumping when bootstrap modal is called
+    overflow: hidden !important;
+  }
+  &-open {
+    // Prevent page from jumping when bootstrap modal is called
+    overflow: visible;
+  }
+  &-footer {
+    border-top: 1px solid rgba(#e9ecef, 0.1);
+  }
+}
+
+// forms
+// input
+input,
+textarea {
+  background: lighten($bgSecondary, 5%) !important;
+  color: $textSecondary !important;
+  border: 1px solid rgba($textSecondary, 0.3) !important;
+  overflow: hidden;
+  transition: all 0.2s linear !important;
+
+  &::placeholder {
+    color: $textSecondary;
+  }
+
+  &:focus {
+    border: 1px solid $info !important;
+    box-shadow: 0 0 4px 0 $info !important;
+    color: white !important;
+    background: lighten($bgSecondary, 3%) !important;
+
+    & + label {
+      color: $textPrimary;
+    }
+  }
+}
+
+// label
+label {
+  font-weight: 400 !important;
+  color: $textSecondary;
+}
+
+small {
+  color: $textSecondary;
+}
+
+// cards
+.card {
+  background: $bgSecondary;
+
+  &-header {
+    .section-title {
+      color: $textSecondary;
+      font-weight: 300;
+      margin: 0;
+
+      span {
+        color: $info;
+        font-weight: 400;
+      }
+    }
+  }
+}

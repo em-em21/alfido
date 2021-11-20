@@ -1,0 +1,11 @@
+.main-sidebar {
+	background: $bgSecondary;
+	box-shadow: 0 3px 5px 1px #252525;
+	border-right: 1px solid rgba(white, 0.05);
+
+	.sidebar {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}

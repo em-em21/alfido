@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	checkPermissions()
 
 	// Chat
-	const pusher = new Pusher('d2059ddf4f6dd4d07d04', {
+	const pusher = new Pusher('3f2bf46fc51f63908064', {
 		cluster: 'ap2',
 	})
 

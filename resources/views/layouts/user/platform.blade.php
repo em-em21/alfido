@@ -24,7 +24,7 @@
       </div>
       {{-- mini widget --}}
       <div class="card">
-        {{-- @yield('widget-small') --}}
+        @yield('widget-small')
       </div>
     </div>
   </div>

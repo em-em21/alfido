@@ -5,7 +5,7 @@
 @section('data-title', __('Редактировать профиль'))
 
 @section('content')
-  <div class="card | w-full max-w-3xl my-2 md:my-0 mx-auto" x-data="{ active: 1, activeChildTab: 1, activePaymentTab: 1 }"
+  <div class="card | w-full max-w-3xl my-2 md:my-0 mx-auto" x-data="{ active: 3, activeChildTab: 1, activePaymentTab: 1 }"
     x-cloak>
     {{-- Tabs --}}
     <ul class="tabs-wrapper">

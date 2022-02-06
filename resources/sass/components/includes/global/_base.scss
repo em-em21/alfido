@@ -47,12 +47,12 @@ html {
 
 		/// Advanced Chart Wrapper
 		& > div:first-child {
-			grid-column: 1 / 13;
+			grid-column: 1 / 12;
 		}
 
 		/// Buy-sell and small widget
 		& > div:last-child {
-			grid-column: 13 / -1;
+			grid-column: 12 / -1;
 			height: 100%;
 			display: grid;
 			grid-template-rows: 1.3fr 1.7fr;

@@ -16,7 +16,6 @@ class StocksSeeder extends Seeder
     {
         $stocks = [
 			// Cryptocurrency [market === 0]
-			// ! changed binanceus to currencycom
 			['name' => 'Bitcoin', 'alias' => 'BTC',  'market' => 0],
 			['name' => 'Ethereum', 'alias' => 'ETH',  'market' => 0],
 			['name' => 'Tether', 'alias' => 'USDT',  'market' => 0],
@@ -28,24 +27,17 @@ class StocksSeeder extends Seeder
 			['name' => 'Dogecoin', 'alias' => 'DOGE',  'market' => 0],
 			['name' => 'Compound', 'alias' => 'COMP',  'market' => 0],
 			['name' => 'Uniswap', 'alias' => 'UNI',  'market' => 0],
-			// * unavailable trades start
-			// ['name' => 'BNB', 'alias' => 'BNB', 'market' => 0],
-			// ['name' => 'Cardano', 'alias' => 'ADA',  'market' => 0],
-			// ['name' => 'Harmony', 'alias' => 'ONE',  'market' => 0],
-			// ['name' => 'Matic Network', 'alias' => 'MATIC', 'market' => 0],
-			// ['name' => 'Stellar Lumens', 'alias' => 'XLM',  'market' => 0],
-			// ['name' => 'QTUM', 'alias' => 'QTUM',  'market' => 0],
-			// ['name' => 'Storj', 'alias' => 'STORJ',  'market' => 0],
-			// ['name' => 'Decentraland', 'alias' => 'MANA',  'market' => 0],
-			// ['name' => 'Neo', 'alias' => 'NEO',  'market' => 0],
-			// ['name' => 'Algorand', 'alias' => 'ALGO',  'market' => 0],
-			// ['name' => 'Tezos', 'alias' => 'XTZ',  'market' => 0],
-			// ['name' => 'VeChain', 'alias' => 'VET',  'market' => 0],
-			// ['name' => 'DAI', 'alias' => 'DAI',  'market' => 0],
-			// ['name' => 'Ravencoin', 'alias' => 'RVN',  'market' => 0],
-			// ['name' => 'Cosmos', 'alias' => 'ATOM',  'market' => 0],
-			// ['name' => 'Zilliqa', 'alias' => 'ZIL',  'market' => 0],
-			// * unavailable trades end
+			// new
+			['name' => 'Binance Coin', 'alias' => 'BNB',  'market' => 0],
+			['name' => 'Polygon', 'alias' => 'MATIC',  'market' => 0],
+			['name' => 'Qtum', 'alias' => 'QTUM',  'market' => 0],
+			['name' => 'Decentraland', 'alias' => 'MANA',  'market' => 0],
+			['name' => 'Aragon', 'alias' => 'ANT',  'market' => 0],
+			['name' => 'Aave', 'alias' => 'AAVE',  'market' => 0],
+			['name' => 'Yearn.Finance', 'alias' => 'YFI',  'market' => 0],
+			['name' => 'Band Protocol', 'alias' => 'BAND',  'market' => 0],
+			['name' => 'Avalanche', 'alias' => 'AVAX',  'market' => 0],
+			['name' => 'Balancer', 'alias' => 'BAL',  'market' => 0],
 
 			// Forex Stocks [market === 1]
 			['name' => 'Apple', 'alias' => 'AAPL', 'market' => 1],
@@ -103,6 +95,10 @@ class StocksSeeder extends Seeder
 			['name' => 'Aberdeen Std Blm', 'alias' => 'BCI', 'market' => 2],
 		];
 
-		foreach ($stocks as $stock) Stock::create($stock);
+		foreach ($stocks as $stock) {
+			$existing = Stock::where('name', $stock['name'])->first();
+			
+			if (!$existing) Stock::create($stock);
+		}
     }
 }

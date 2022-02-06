@@ -15,6 +15,11 @@
 			{{ __('Wire Transfer') }}
 		</button>
 	</li>
+	<li class="flex-grow">
+		<button type="button" class="tab" :class="{'active': activeChildTab === 4}" x-on:click="activeChildTab = 4">
+			{{ __('Bitcoin') }}
+		</button>
+	</li>
 </ul>
 
 {{-- Tab Content --}}
@@ -32,5 +37,10 @@
 	{{-- Wire --}}
 	<div x-show="activeChildTab === 3">
 		@include('includes.user.profile-tabs.payment-tabs.wire')
+	</div>
+
+	{{-- Crypto --}}
+	<div x-show="activeChildTab === 4" class="py-3 px-10 md:py-5 md:px-16">
+		@livewire('user.info.btc')
 	</div>
 </div>

@@ -35,6 +35,20 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="wallet">Tether кошелёк</label>
+                            <input class="form-control" id="wallet" name="usdt_wallet">
+
+                            @if(!empty($settings->usdt_wallet))
+                                <small class="form-text text-muted">
+									Сейчас:
+									<span class="ml-1 text-info spanVal">
+										{{$settings->usdt_wallet}}
+									</span>
+								</small>
+                            @endif
+                        </div>
+
+                        <div class="form-group">
                             <label for="phone">Номер телефона</label>
                             <input class="form-control" id="phone" name="phone">
 

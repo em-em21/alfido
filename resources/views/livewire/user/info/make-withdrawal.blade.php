@@ -33,7 +33,7 @@
 			</div>
 
 			<div class="form-group">
-				<label class="label">{{ __('Номер кошелька') }}</label>
+				<label class="label">{{ __('Адрес кошелька') }}</label>
 
 				<div class="w-2/4">
 					<input 
@@ -41,7 +41,7 @@
 						wire:model="wallet"
 						class="input"
 						autocomplete="off"
-						placeholder="{{ __('Введите номер кошелька') }}"
+						placeholder="{{ __('Введите адрес кошелька') }}"
 						required
 					>
 

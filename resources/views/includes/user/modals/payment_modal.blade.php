@@ -31,6 +31,11 @@
 			{{-- <div x-show="activePay === 'beta'" class="w-full md:w-120">
 				@include('includes.user.payment.betatransfer')
 			</div> --}}
+
+			{{-- tether --}}
+			<div x-show="activePay === 'usdt'" class="w-full md:w-120">
+				@include('includes.user.payment.usdt')
+			</div>
 		</div>
     </div>
 </div>

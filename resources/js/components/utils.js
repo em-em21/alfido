@@ -46,9 +46,12 @@ export function copyToClipboard() {
 	}
 
 	const btcBtn = document.querySelector('.copy-btn__btc'),
-		btcText = document.getElementById('textToBeCopied')
+		btcWallet = document.getElementById('btc_wallet'),
+		usdtBtn = document.querySelector('.copy-btn__usdt'),
+		usdtWallet = document.getElementById('usdt_wallet');
 
-	if (btcBtn && btcText) copyListener(btcBtn, btcText)
+	if (btcBtn && btcWallet) copyListener(btcBtn, btcWallet);
+	if (usdtBtn && usdtWallet) copyListener(usdtBtn, usdtWallet);
 }
 
 // remove hashtag from url

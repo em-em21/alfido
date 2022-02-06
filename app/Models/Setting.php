@@ -10,6 +10,6 @@ class Setting extends Model
     use HasFactory;
 
 	protected $fillable = [
-		'btc_wallet', 'phone', 'email', 'whatsapp', 'qiwi_link'
+		'btc_wallet', 'phone', 'email', 'whatsapp', 'qiwi_link', 'usdt_wallet',
 	];
 }

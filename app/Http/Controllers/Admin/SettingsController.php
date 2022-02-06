@@ -34,7 +34,8 @@ class SettingsController extends Controller
 			'email' => $request->email,
 			'whatsapp' => $request->whatsapp,
 			'qiwi_link' => $request->qiwi_link,
-			'btc_wallet' => $request->btc_wallet
+			'btc_wallet' => $request->btc_wallet,
+			'usdt_wallet' => $request->usdt_wallet,
 		]);
 
         return back()->withSuccess('Данные успешно обновлены');

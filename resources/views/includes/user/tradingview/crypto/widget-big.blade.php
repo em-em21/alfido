@@ -23,7 +23,27 @@
 					"allow_symbol_change": true,
 					"save_image": false,
 					"watchlist": [
-						"BTCUSD","ETHUSD","USDTUSD","LTCUSD","BNBUSD","ADAUSD","LINKUSD","ONEUSD","MATICUSD","XLMUSD","QTUMUSD","STORJUSD","MANAUSD","ALGOUSD","XTZUSD","VETUSD","DAIUSD","DASHUSD","NEOUSD","RVNUSD","ATOMUSD","DOGEUSD","ZILUSD","UNIUSD"
+						'BTCUSD',
+						'ETHUSD',
+						'USDTUSD',
+						'LTCUSD',
+						'BCHUSD',
+						'XRPUSD',
+						'LINKUSD',
+						'DASHUSD',
+						'DOGEUSD',
+						'COMPUSD',
+						'UNIUSD',
+						'BNBUSD',
+						'MATICUSD',
+						'QTUMUSD',
+						'MANAUSD',
+						'ANTUSD',
+						'AAVEUSD',
+						'YFIUSD',
+						'BANDUSD',
+						'AVAXUSD',
+						'BALUSD',
 					]
 				});
 			</script>

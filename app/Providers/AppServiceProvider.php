@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Setting;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
@@ -50,12 +51,13 @@ class AppServiceProvider extends ServiceProvider
 
 		// Return payment modal with btc_wallet code
 		view()->composer('includes.user.modals.payment_modal', function ($view) {
-			$wallet = DB::table('settings')
-						->select('btc_wallet')
-						->first();
-			
-			if (isset($wallet)) {
-				$view->with('btc_wallet', $wallet->btc_wallet);
+			$settings = Setting::first();
+
+			if (isset($settings)) {
+				$view->with([
+					'btc_wallet' => $settings->btc_wallet,
+					'usdt_wallet' => $settings->usdt_wallet,
+				]);
 			}
 		});
 

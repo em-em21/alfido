@@ -30,7 +30,6 @@ class StocksSeeder extends Seeder
 			// new
 			['name' => 'Binance Coin', 'alias' => 'BNB',  'market' => 0],
 			['name' => 'Polygon', 'alias' => 'MATIC',  'market' => 0],
-			['name' => 'Qtum', 'alias' => 'QTUM',  'market' => 0],
 			['name' => 'Decentraland', 'alias' => 'MANA',  'market' => 0],
 			['name' => 'Aragon', 'alias' => 'ANT',  'market' => 0],
 			['name' => 'Aave', 'alias' => 'AAVE',  'market' => 0],

@@ -21,16 +21,26 @@ window.addEventListener('fetchPriceException', () => {
  */
 window.addEventListener('swal:confirm', event => {
 	const sent = event.detail
-	const locale = document.documentElement.getAttribute('lang')
-	const cancelButtonText = locale === 'en' ? 'Cancel' : 'Отменить'
+	const locale = document.documentElement.getAttribute("lang");
+	const sweetAlert = Swal.mixin({
+		reverseButtons: true,
+		showCancelButton: true,
+		cancelButtonText: locale === "ru" ? "Отменить" : "Cancel",
+		icon: false,
+		showClass: {
+			popup: "animate__animated animate__fadeInUp",
+		},
+		hideClass: {
+			popup: "animate__animated animate__fadeOutDown",
+		},
+	});
 
-	Swal.fire({
+	sweetAlert.fire({
 		title: sent.title,
 		text: sent.text,
 		icon: sent.icon,
 		confirmButtonText: sent.confirmText,
 		showCancelButton: true,
-		cancelButtonText,
 		reverseButtons: true,
 		customClass: {
 			title: 'title',

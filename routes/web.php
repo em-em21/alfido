@@ -67,6 +67,7 @@ Route::middleware('set.locale')->group(function() {
 
 		// Managers
 		Route::get('/managers', Managers::class)->name('admin.managers');
+        Route::get('/managers/{manager}', Managers\Edit::class)->name('admin.managers.edit');
 
 		// Admin Profile page
 		Route::view('/account', 'admin.account')->name('admin.account');

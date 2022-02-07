@@ -25,13 +25,17 @@ class Managers extends Component
 
 		$this->dispatchBrowserEvent('swal:confirm', [
 			'model' => 'manager:delete',
-			'icon' => 'warning',
 			'title' => 'Удалить менеджера '.ucfirst($manager->surname).' '.ucfirst($manager->name).'?',
 			'confirmText' => 'Удалить',
 			'text' => 'Это действие нельзя будет отменить',
 			'id' => $id
 		]);
 	}
+
+    public function editManager(User $user)
+    {
+        dd($user);
+    }
 
 	public function deleteManager($id)
 	{

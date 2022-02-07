@@ -5,7 +5,7 @@ mix
   // TODO: merge in one file and execute conditionally
   // .js('resources/js/guest.js', 'public/js/scripts')
   .js('resources/js/auth.js', 'public/js/scripts')
-  // .js('resources/js/admin.js', 'public/js/scripts')
+  .js('resources/js/admin.js', 'public/js/scripts')
   .js('resources/js/user.js', 'public/js/scripts')
   // Include webpack polyfills since they are "no longer the case in webpack >= 5"
   // In the first place these polyfills were needed for ccxt to work properly

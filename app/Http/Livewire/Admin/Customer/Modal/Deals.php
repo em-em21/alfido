@@ -43,7 +43,6 @@ class Deals extends Component
 	 {
 		$this->dispatchBrowserEvent('swal:confirm', [
 			'model' => 'deal:delete',
-			'icon' => 'warning',
 			'title' => 'Удалить сделку?',
 			'confirmText' => 'Да, удалить',
 			'text' => 'Это действие нельзя отменить',

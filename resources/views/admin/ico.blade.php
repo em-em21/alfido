@@ -188,7 +188,7 @@
 		const table = $('#dataTable').DataTable();
 
 		//Edit
-		table.on('click', '.edit', function() {
+		table.on('click', '.crud-btn_edit', function() {
 			$tr = $(this).closest('tr');
 
 			let data = table.row($tr).data();
@@ -205,7 +205,7 @@
 		});
 
 		//Delete
-		table.on('click', '.delete', function() {
+		table.on('click', '.crud-btn_delete', function() {
 			$tr = $(this).closest('tr');
 
 			let data = table.row($tr).data();

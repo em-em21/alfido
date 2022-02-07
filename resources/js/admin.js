@@ -51,10 +51,27 @@ $('.alert-success span, .alert-danger span').on('click', () => {
  * * ( confirmation modal )
  *
  */
+
+console.log('bugagaga')
+
 window.addEventListener('swal:confirm', event => {
 	const sent = event.detail
 
-	Swal.fire({
+	const locale = document.documentElement.getAttribute("lang");
+	const sweetAlert = Swal.mixin({
+		reverseButtons: true,
+		showCancelButton: true,
+		cancelButtonText: locale === "ru" ? "Отменить" : "Cancel",
+		icon: false,
+		showClass: {
+			popup: "animate__animated animate__fadeInUp",
+		},
+		hideClass: {
+			popup: "animate__animated animate__fadeOutDown",
+		},
+	});
+
+	sweetAlert.fire({
 		title: sent.title,
 		text: sent.text,
 		icon: sent.icon,

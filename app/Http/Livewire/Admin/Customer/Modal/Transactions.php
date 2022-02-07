@@ -109,7 +109,6 @@ class Transactions extends Component
 	{
 	   $this->dispatchBrowserEvent('swal:confirm', [
 		   'model' => 'trans:delete',
-		   'icon' => 'warning',
 		   'title' => 'Удалить транзакцию?',
 		   'confirmText' => 'Да, удалить',
 		   'text' => 'Это действие нельзя отменить',

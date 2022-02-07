@@ -18,7 +18,6 @@ class Algotrading extends Component
 	{
 		$this->dispatchBrowserEvent('swal:confirm', [
 			'model' => 'algo',
-			'icon' => 'question',
 			'title' => auth()->user()->algo ? __('Деактивировать алготрейдинг?') : __('Активировать алготрейдинг?'),
 			'confirmText' => 'OK',
 			'text' => '',

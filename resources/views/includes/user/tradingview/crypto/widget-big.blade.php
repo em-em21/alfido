@@ -36,7 +36,6 @@
 						'UNIUSD',
 						'BNBUSD',
 						'MATICUSD',
-						'QTUMUSD',
 						'MANAUSD',
 						'ANTUSD',
 						'AAVEUSD',

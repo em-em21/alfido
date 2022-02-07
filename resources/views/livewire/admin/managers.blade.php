@@ -35,6 +35,13 @@
 								<td>{{$manager->created_at}}</td>
 								<td>
 									<div class="d-flex align-items-center">
+										<a
+												href="{{ route('admin.managers.edit', [ 'manager' => $manager->id ]) }}"
+												title="Изменить менеджера"
+												class="crud-btn crud-btn_edit mt-1 mb-1"
+										>
+											<i class="fas fa-edit ad" style="pointer-events: none;"></i>
+										</a>
 										<button
 											type="button"
 											title="Удалить менеджера"

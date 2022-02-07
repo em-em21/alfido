@@ -93,6 +93,6 @@ class IcoController extends Controller
     {
 		Ico::find($id)->delete();
 
-        return back()->withSuccess('status', 'ICO успешно удалён.');
+        return back()->withSuccess('ICO успешно удалён.');
     }
 }

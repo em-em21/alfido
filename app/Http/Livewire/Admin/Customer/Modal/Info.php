@@ -95,7 +95,6 @@ class Info extends Component
 	{
 		$this->dispatchBrowserEvent('swal:confirm', [
 			'model' => 'user:delete',
-			'icon' => 'warning',
 			'title' => 'Удалить пользователя?',
 			'confirmText' => 'Да, удалить',
 			'text' => 'Это действие нельзя отменить',
@@ -107,7 +106,6 @@ class Info extends Component
 	{
 		$this->dispatchBrowserEvent('swal:confirm', [
 			'model' => 'user:ban',
-			'icon' => 'warning',
 			'title' => 'Заблокировать пользователя?',
 			'confirmText' => 'Да, заблокировать',
 			'text' => 'Пользователь не сможет открывать сделки и выводить деньги',
@@ -119,7 +117,6 @@ class Info extends Component
 	{
 		$this->dispatchBrowserEvent('swal:confirm', [
 			'model' => 'user:revive',
-			'icon' => 'success',
 			'title' => 'Разблокировать пользователя?',
 			'confirmText' => 'Да, разблокировать',
 			'text' => 'Пользователь теперь сможет открывать сделки и выводить деньги',

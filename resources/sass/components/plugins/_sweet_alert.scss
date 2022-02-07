@@ -1,0 +1,101 @@
+.swal2-popup {
+  padding: 2.5rem 1.25rem !important;
+  background: #1e2026 !important;
+
+  .swal2-title {
+    color: #f1f5f9 !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .swal2-content {
+    font-size: 1.1rem !important;
+    color: #9ca3af !important;
+  }
+
+  .swal2-actions {
+    margin-top: 1rem !important;
+
+    button {
+      font-weight: 400 !important;
+    }
+  }
+}
+
+
+// sweet alert animations
+// pop-up animation
+// fade in
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0) !important;
+    transform: translate3d(0, 20px, 0) !important;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0) !important;
+    transform: translateZ(0) !important;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0) !important;
+    transform: translate3d(0, 20px, 0) !important;
+  }
+  to {
+    opacity: 1 !important;
+    -webkit-transform: translateZ(0) !important;
+    transform: translateZ(0) !important;
+  }
+}
+
+.animate__fadeInUp {
+  -webkit-animation-name: fadeInUp !important;
+  animation-name: fadeInUp !important;
+}
+
+// fade out
+@-webkit-keyframes fadeOutDown {
+  0% {
+    opacity: 1 !important;
+  }
+  to {
+    opacity: 0 !important;
+    -webkit-transform: translate3d(0, 50px, 0) !important;
+    transform: translate3d(0, 50px, 0) !important;
+  }
+}
+
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1 !important;
+  }
+  to {
+    opacity: 0 !important;
+    -webkit-transform: translate3d(0, 50px, 0) !important;
+    transform: translate3d(0, 50px, 0) !important;
+  }
+}
+
+.animate__fadeOutDown {
+  -webkit-animation-name: fadeOutDown !important;
+  animation-name: fadeOutDown !important;
+}
+
+.animate__animated {
+  -webkit-animation-fill-mode: both !important;
+  animation-fill-mode: both !important;
+
+  &.animate__fadeOutDown {
+    -webkit-animation-duration: 0s !important;
+    animation-duration: 0s !important;
+  }
+
+  &.animate__fadeInUp {
+    -webkit-animation-duration: 0.3s !important;
+    animation-duration: 0.3s !important;
+  }
+}

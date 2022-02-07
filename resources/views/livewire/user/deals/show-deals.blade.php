@@ -15,7 +15,7 @@
 
     {{-- Table --}}
     <div
-      class="w-full inline-block shadow overflow-hidden border border-gray-700 rounded overflow-x-auto {{ count($deals) > 2 ? 'mt-5' : '' }}">
+      class="w-full inline-block shadow overflow-hidden border border-gray-700 rounded overflow-x-auto">
       <table id="dealsTable" class="min-w-full">
         <thead>
           <tr class="bg-slightly-lighter">
@@ -39,7 +39,7 @@
 
             <th class="w-1/6 border-b border-gray-700">
               <div class="w-full flex items-center justify-between px-5 py-2 text-gray-200 font-normal">
-                <span>Инвестиция (USD)</span>
+                <span>Инвестиция</span>
               </div>
             </th>
 
@@ -64,23 +64,18 @@
                 data-id="{{ $deal->id }}" data-ico="{{ $deal->is_ico }}">
                 <td>
                   <div class="px-5 py-2 flex flex-col">
-                    <p class="text-gray-50">
+                    <p class="text-gray-500">
                       {{ !$deal->market ? 'Криптовалютный' : ($deal->market === 1 ? 'Фондовый' : 'Товарно-сырьевой') }}
                     </p>
-                    <p class="text-blue-300 text-center inline-flex items-center">
-                      <span>{{ $deal->stock_naming }}</span>
-                      <span class="mx-1 inline-block">|</span>
-                      <span class="deal__als">{{ $deal->stock_alias }}</span>
+                    <p class="text-gray-200">
+                      {{ $deal->stock_naming }}
+                      (<span class="deal__als">{{ $deal->stock_alias }}</span>)
                     </p>
                   </div>
                 </td>
                 <td>
                   <div class="px-5 py-2 flex items-center">
                     <div class="inline-flex items-center p-1 deal-profit">
-                      {{-- <span class="mr-px ml-1 text-white">
-												&#36;
-											</span> --}}
-
                       {{-- Profit --}}
                       <span class="text-white deal-profit__profit p-1 pr-0">
                         {{ $deal->profit }}
@@ -110,9 +105,7 @@
                 </td>
                 <td>
                   <div class="px-5 py-2 flex items-center">
-                    {{-- <span class="mr-1 nunito text-white">
-											&#36;
-										</span> --}}
+                    <span class="mr-1 nunito text-white">&#36;</span>
 
                     <span class="text-white deal__inv">
                       {{ $deal->investment }}

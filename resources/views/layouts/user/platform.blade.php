@@ -13,7 +13,7 @@
   <div class="bs_widget_wrapper">
     {{-- Chart --}}
     <div>
-      @yield('widget-big')
+      {{-- @yield('widget-big') --}}
     </div>
 
     {{-- BS Modal & mini widget --}}
@@ -24,7 +24,7 @@
       </div>
       {{-- mini widget --}}
       <div class="card">
-        @yield('widget-small')
+        {{-- @yield('widget-small') --}}
       </div>
     </div>
   </div>
@@ -42,7 +42,7 @@
   </div>
 
   {{-- marque --}}
-  @include('includes.user.tradingview.ticker')
+{{--  @include('includes.user.tradingview.ticker')--}}
 @endsection
 
 {{-- Scripts --}}

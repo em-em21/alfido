@@ -7819,9 +7819,23 @@ $('.alert-success span, .alert-danger span').on('click', function () {
  *
  */
 
+console.log('bugagaga');
 window.addEventListener('swal:confirm', function (event) {
   var sent = event.detail;
-  sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+  var locale = document.documentElement.getAttribute("lang");
+  var sweetAlert = sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().mixin({
+    reverseButtons: true,
+    showCancelButton: true,
+    cancelButtonText: locale === "ru" ? "Отменить" : "Cancel",
+    icon: false,
+    showClass: {
+      popup: "animate__animated animate__fadeInUp"
+    },
+    hideClass: {
+      popup: "animate__animated animate__fadeOutDown"
+    }
+  });
+  sweetAlert.fire({
     title: sent.title,
     text: sent.text,
     icon: sent.icon,

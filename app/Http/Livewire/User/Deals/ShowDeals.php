@@ -31,7 +31,6 @@ class ShowDeals extends Component
 	{
 		$this->dispatchBrowserEvent('swal:confirm', [
 			'model' => 'deal:close',
-			'icon' => 'warning',
 			'title' => __('Закрыть сделку?'),
 			'confirmText' => __('Закрыть'),
 			'text' => '',
@@ -68,14 +67,11 @@ class ShowDeals extends Component
     {
 		$this->dispatchBrowserEvent('reindex-table');
 
-		$deals = auth()->user()
-					   ->deals()
-					   ->whereIsOpen(true)
-					   ->whereMarket($this->current_page_market)
-					   ->paginate(3); // paginate by 3 to surely avoid wss limit reaching
-		
         return view('livewire.user.deals.show-deals', [
-			'deals' => $deals
-		]);
+            'deals' => auth()->user()->deals()
+                ->whereIsOpen(true)
+                ->whereMarket($this->current_page_market)
+                ->paginate(4) // paginate by 4 to surely avoid wss limit reaching
+        ]);
     }
 }

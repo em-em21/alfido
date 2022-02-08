@@ -89,7 +89,7 @@
 			</p>
 
 			<p class="text-gray-500 mt-2">
-				Alfido Invest &copy; {{ \Carbon\Carbon::now()->year }}
+				Alfido &copy; {{ \Carbon\Carbon::now()->year }}
 			</p>
 		</div>
 	</div>

@@ -1,6 +1,6 @@
 <h1 class="mt-5 mb-3 text-xl text-gray-700 text-center">CLIENT AGREEMENT</h1>
 <div class="text-gray-500">
-	<p class="mb-3">This Agreement determines the terms and conditions of use by the Visitors of the materials on the website www.alfidoinvest.com (hereinafter referred to as the "Site").</p>
+	<p class="mb-3">This Agreement determines the terms and conditions of use by the Visitors of the materials on the website www.alfidojibberish.com (hereinafter referred to as the "Site").</p>
 	<p class="mb-3">1. General conditions</p>
 	<p class="mb-3"> 1.1. Any use of the materials and services of the Site is not regulated.<br>
 	1.2. This Agreement is a public offer. By accessing the materials of the Site, the User is deemed to have acceded to this Agreement.<br>

@@ -3,11 +3,7 @@
         Options -MultiViews -Indexes
     </IfModule>
 
-
     RewriteEngine On
-    # redirect
-    RewriteCond %{THE_REQUEST} /index\.php\?_m=mod_product&_a=view&p_id=87 [NC]
-    RewriteRule ^ https://www.alfido.net/sql-recovery/? [NC,L,R]
 
 	# Https (enable when deploy)
 	RewriteCond %{HTTPS} off

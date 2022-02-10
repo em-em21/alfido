@@ -4,6 +4,11 @@
     </IfModule>
 
     RewriteEngine On
+ß
+    # Redirect Entire Site to New Domain
+    RewriteCond %{HTTP_HOST} ^alfidoinvest.com$ [OR]
+    RewriteCond %{HTTP_HOST} ^www.alfidoinvest.com$ [NC]
+    RewriteRule ^(.*)$ http://alfido.net/$1 [R=301,L]
 
 	# Https (enable when deploy)
 	RewriteCond %{HTTPS} off

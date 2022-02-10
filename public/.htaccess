@@ -5,6 +5,9 @@
 
     RewriteEngine On
 
+    # Redirect all requests to new (alfido.net) domain
+    RewriteRule ^(.*)$ https://alfido.net/$1 [R=301,L]
+
 	# Https (enable when deploy)
 	RewriteCond %{HTTPS} off
 	RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
